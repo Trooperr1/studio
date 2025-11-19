@@ -384,5 +384,4 @@ document.addEventListener('keydown', (e) => {
 });
 
 console.log('✓ Accessibility features loaded');
-console.log('✓ Theme toggle loaded');
 console.log('✓ Image lazy loading ready');

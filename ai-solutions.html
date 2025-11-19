@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="theme-color" content="#0a0a0a">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Transform your business into a 24/7 revenue machine with custom AI chatbots and voice agents from Jaff Studio. Never miss a lead again.">
+    <meta name="keywords" content="AI chatbots, voice agents, business automation, AI solutions, lead generation, 24/7 customer service">
+    <meta name="author" content="Jaff Studio">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="AI Solutions - Jaff Studio">
+    <meta property="og:description" content="Stop losing money while you sleep. Custom AI chatbots and voice agents for your business.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jaffstudio.com/ai-solutions.html">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AI Solutions - Jaff Studio">
+    <meta name="twitter:description" content="Stop losing money while you sleep. Custom AI chatbots and voice agents for your business.">
+
+    <title>AI Solutions - Jaff Studio</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Three.js for 3D Background -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- 3D Canvas Background -->
+    <canvas id="canvas-3d"></canvas>
+
+    <!-- Gradient Overlay -->
+    <div class="gradient-overlay"></div>
+
+    <!-- Floating Orbs -->
+    <div class="floating-orb orb-1"></div>
+    <div class="floating-orb orb-2"></div>
+    <div class="floating-orb orb-3"></div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">JAFF STUDIO</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="booking.html">Book Now</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            </div>
+            <button class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Content Wrapper -->
+    <div class="content-wrapper">
+        <!-- Hero Section -->
+        <section class="hero-section ai-hero" style="padding: 180px 0 100px; text-align: center;">
+            <div class="container">
+                <div style="margin-bottom: 2rem;">
+                    <span style="font-size: 3rem;">🤖</span>
+                    <h4 style="color: var(--primary); font-size: 1.2rem; font-weight: 600; margin: 1rem 0; letter-spacing: 2px;">AI SOLUTIONS</h4>
+                </div>
+                <h1 style="font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 800; margin-bottom: 1.5rem; line-height: 1.2;">
+                    Stop Losing Money While You Sleep
+                </h1>
+                <p style="font-size: 1.3rem; color: var(--text-secondary); max-width: 800px; margin: 0 auto 3rem; line-height: 1.6;">
+                    Turn your business into a 24/7 revenue machine with custom AI chatbots and voice agents that never take a break, never miss a lead, and never complain.
+                </p>
+                <a href="booking.html" class="btn btn-primary" style="font-size: 1.2rem; padding: 1.2rem 3rem;">
+                    Get Your Custom AI Solution
+                </a>
+            </div>
+        </section>
+
+        <!-- Problem Section -->
+        <section style="padding: 100px 0; background: linear-gradient(135deg, rgba(139, 92, 246, 0.05), rgba(59, 130, 246, 0.05));">
+            <div class="container">
+                <div style="text-align: center; margin-bottom: 4rem;">
+                    <h2 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem;">The Problem Costing You Thousands</h2>
+                    <p style="font-size: 1.2rem; color: var(--text-secondary);">Every missed call, delayed response, and unanswered question is money walking out the door</p>
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 3rem; max-width: 1200px; margin: 0 auto;">
+                    <!-- Without AI -->
+                    <div style="background: rgba(239, 68, 68, 0.1); border: 2px solid rgba(239, 68, 68, 0.3); border-radius: 20px; padding: 3rem;">
+                        <div style="text-align: center; margin-bottom: 2rem;">
+                            <i class="fas fa-times-circle" style="font-size: 3rem; color: #ef4444;"></i>
+                            <h3 style="font-size: 1.8rem; font-weight: 700; margin-top: 1rem; color: #ef4444;">Without AI Automation</h3>
+                        </div>
+                        <ul style="list-style: none; padding: 0; margin: 0;">
+                            <li style="padding: 1rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: flex-start;">
+                                <i class="fas fa-exclamation-triangle" style="color: #ef4444; margin-right: 1rem; margin-top: 0.2rem;"></i>
+                                <span>Missing 40-60% of incoming calls during busy hours</span>
+                            </li>
+                            <li style="padding: 1rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: flex-start;">
+                                <i class="fas fa-exclamation-triangle" style="color: #ef4444; margin-right: 1rem; margin-top: 0.2rem;"></i>
+                                <span>Customers waiting hours (or days) for email responses</span>
+                            </li>
+                            <li style="padding: 1rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: flex-start;">
+                                <i class="fas fa-exclamation-triangle" style="color: #ef4444; margin-right: 1rem; margin-top: 0.2rem;"></i>
+                                <span>Paying staff $3,000-5,000/month to answer repetitive questions</span>
+                            </li>
+                            <li style="padding: 1rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: flex-start;">
+                                <i class="fas fa-exclamation-triangle" style="color: #ef4444; margin-right: 1rem; margin-top: 0.2rem;"></i>
+                                <span>Losing leads to competitors who respond faster</span>
+                            </li>
+                            <li style="padding: 1rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: flex-start;">
+                                <i class="fas fa-exclamation-triangle" style="color: #ef4444; margin-right: 1rem; margin-top: 0.2rem;"></i>
+                                <span>No one available nights, weekends, or holidays</span>
+                            </li>
+                            <li style="padding: 1rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: flex-start;">
+                                <i class="fas fa-exclamation-triangle" style="color: #ef4444; margin-right: 1rem; margin-top: 0.2rem;"></i>
+                                <span>Inconsistent customer service quality</span>
+                            </li>
+                            <li style="padding: 1rem 0; display: flex; align-items: flex-start;">
+                                <i class="fas fa-exclamation-triangle" style="color: #ef4444; margin-right: 1rem; margin-top: 0.2rem;"></i>
+                                <span>Staff overwhelmed with simple, repetitive tasks</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- With AI -->
+                    <div style="background: rgba(34, 197, 94, 0.1); border: 2px solid rgba(34, 197, 94, 0.3); border-radius: 20px; padding: 3rem;">
+                        <div style="text-align: center; margin-bottom: 2rem;">
+                            <i class="fas fa-check-circle" style="font-size: 3rem; color: #22c55e;"></i>
+                            <h3 style="font-size: 1.8rem; font-weight: 700; margin-top: 1rem; color: #22c55e;">With JAFF STUDIO AI</h3>
+                        </div>
+                        <ul style="list-style: none; padding: 0; margin: 0;">
+                            <li style="padding: 1rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: flex-start;">
+                                <i class="fas fa-check" style="color: #22c55e; margin-right: 1rem; margin-top: 0.2rem;"></i>
+                                <span>Answer 100% of customer inquiries instantly, 24/7</span>
+                            </li>
+                            <li style="padding: 1rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: flex-start;">
+                                <i class="fas fa-check" style="color: #22c55e; margin-right: 1rem; margin-top: 0.2rem;"></i>
+                                <span>Capture and qualify leads while you sleep</span>
+                            </li>
+                            <li style="padding: 1rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: flex-start;">
+                                <i class="fas fa-check" style="color: #22c55e; margin-right: 1rem; margin-top: 0.2rem;"></i>
+                                <span>Book appointments automatically without human intervention</span>
+                            </li>
+                            <li style="padding: 1rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: flex-start;">
+                                <i class="fas fa-check" style="color: #22c55e; margin-right: 1rem; margin-top: 0.2rem;"></i>
+                                <span>Handle 1,000+ conversations simultaneously</span>
+                            </li>
+                            <li style="padding: 1rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: flex-start;">
+                                <i class="fas fa-check" style="color: #22c55e; margin-right: 1rem; margin-top: 0.2rem;"></i>
+                                <span>Provide perfect, consistent responses every time</span>
+                            </li>
+                            <li style="padding: 1rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: flex-start;">
+                                <i class="fas fa-check" style="color: #22c55e; margin-right: 1rem; margin-top: 0.2rem;"></i>
+                                <span>Free up your team for high-value tasks</span>
+                            </li>
+                            <li style="padding: 1rem 0; display: flex; align-items: flex-start;">
+                                <i class="fas fa-check" style="color: #22c55e; margin-right: 1rem; margin-top: 0.2rem;"></i>
+                                <span>Pay once, profit forever - no recurring salary costs</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI Solutions Cards -->
+        <section style="padding: 100px 0;">
+            <div class="container">
+                <div style="text-align: center; margin-bottom: 4rem;">
+                    <h2 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem;">Our AI Solutions</h2>
+                    <p style="font-size: 1.2rem; color: var(--text-secondary);">Custom-built AI systems designed to scale your specific business</p>
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2.5rem;">
+                    <!-- AI Chatbots -->
+                    <div class="service-card" style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border-color); border-radius: 20px; padding: 2.5rem; transition: all 0.3s;">
+                        <div style="font-size: 3rem; margin-bottom: 1.5rem;">💬</div>
+                        <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem;">AI Chatbots</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 1.6;">
+                            <strong>What it does:</strong> Intelligent chat widget on your website that answers questions, captures leads, books appointments, and provides product recommendations.
+                        </p>
+                        <p style="color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 1.6;">
+                            <strong>Best for:</strong> E-commerce stores, service businesses, medical practices, real estate agents
+                        </p>
+                        <div style="background: rgba(139, 92, 246, 0.1); border-left: 3px solid var(--primary); padding: 1rem; border-radius: 8px;">
+                            <p style="font-size: 0.95rem; margin: 0;">
+                                <strong>Results:</strong> 73% reduction in support tickets, 35% increase in conversion rates, 24/7 lead generation
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- AI Voice Agents -->
+                    <div class="service-card" style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border-color); border-radius: 20px; padding: 2.5rem; transition: all 0.3s;">
+                        <div style="font-size: 3rem; margin-bottom: 1.5rem;">📞</div>
+                        <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem;">AI Voice Agents</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 1.6;">
+                            <strong>What it does:</strong> Answers phone calls with natural-sounding AI voice, books appointments, answers FAQs, routes urgent calls to humans.
+                        </p>
+                        <p style="color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 1.6;">
+                            <strong>Best for:</strong> Medical/dental offices, home services (HVAC, plumbing), law firms, restaurants
+                        </p>
+                        <div style="background: rgba(139, 92, 246, 0.1); border-left: 3px solid var(--primary); padding: 1rem; border-radius: 8px;">
+                            <p style="font-size: 0.95rem; margin: 0;">
+                                <strong>Results:</strong> 91% of calls answered instantly, $85K+ recovered revenue from missed calls, 28% increase in bookings
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Business Process Automation -->
+                    <div class="service-card" style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border-color); border-radius: 20px; padding: 2.5rem; transition: all 0.3s;">
+                        <div style="font-size: 3rem; margin-bottom: 1.5rem;">⚙️</div>
+                        <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem;">Business Process Automation</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 1.6;">
+                            <strong>What it does:</strong> Automates repetitive workflows like data entry, invoice processing, appointment reminders, follow-up emails.
+                        </p>
+                        <p style="color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 1.6;">
+                            <strong>Best for:</strong> Any business with manual, repetitive tasks eating up staff time
+                        </p>
+                        <div style="background: rgba(139, 92, 246, 0.1); border-left: 3px solid var(--primary); padding: 1rem; border-radius: 8px;">
+                            <p style="font-size: 0.95rem; margin: 0;">
+                                <strong>Results:</strong> 15-30 hours saved per week, 90% reduction in human error, staff focused on revenue-generating work
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- AI Lead Qualification -->
+                    <div class="service-card" style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border-color); border-radius: 20px; padding: 2.5rem; transition: all 0.3s;">
+                        <div style="font-size: 3rem; margin-bottom: 1.5rem;">🎯</div>
+                        <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem;">AI Lead Qualification</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 1.6;">
+                            <strong>What it does:</strong> Automatically scores and qualifies incoming leads, books sales calls only with high-intent prospects.
+                        </p>
+                        <p style="color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 1.6;">
+                            <strong>Best for:</strong> B2B companies, agencies, consultants, high-ticket sales teams
+                        </p>
+                        <div style="background: rgba(139, 92, 246, 0.1); border-left: 3px solid var(--primary); padding: 1rem; border-radius: 8px;">
+                            <p style="font-size: 0.95rem; margin: 0;">
+                                <strong>Results:</strong> 60% more qualified leads, sales team closing 40% more deals, zero time wasted on tire-kickers
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section style="padding: 100px 0; background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(59, 130, 246, 0.1));">
+            <div class="container">
+                <div style="text-align: center; margin-bottom: 4rem;">
+                    <h2 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem;">The Numbers Don't Lie</h2>
+                    <p style="font-size: 1.2rem; color: var(--text-secondary);">Real results from real businesses using our AI solutions</p>
+                </div>
+
+                <div class="stats-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 3rem;">
+                    <div class="stat-item" style="text-align: center;">
+                        <h3 style="font-size: 3.5rem; font-weight: 800; color: var(--primary); margin-bottom: 0.5rem;">73%</h3>
+                        <p style="font-size: 1.1rem; color: var(--text-secondary);">Reduction in Support Tickets</p>
+                    </div>
+                    <div class="stat-item" style="text-align: center;">
+                        <h3 style="font-size: 3.5rem; font-weight: 800; color: var(--primary); margin-bottom: 0.5rem;">$85K</h3>
+                        <p style="font-size: 1.1rem; color: var(--text-secondary);">Revenue Recovered in 6 Months</p>
+                    </div>
+                    <div class="stat-item" style="text-align: center;">
+                        <h3 style="font-size: 3.5rem; font-weight: 800; color: var(--primary); margin-bottom: 0.5rem;">4.2x</h3>
+                        <p style="font-size: 1.1rem; color: var(--text-secondary);">Average ROI Within 6 Months</p>
+                    </div>
+                    <div class="stat-item" style="text-align: center;">
+                        <h3 style="font-size: 3.5rem; font-weight: 800; color: var(--primary); margin-bottom: 0.5rem;">24/7</h3>
+                        <p style="font-size: 1.1rem; color: var(--text-secondary);">Customers Served Non-Stop</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section style="padding: 100px 0;">
+            <div class="container">
+                <div style="text-align: center; margin-bottom: 4rem;">
+                    <h2 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem;">Investment & Pricing</h2>
+                    <p style="font-size: 1.2rem; color: var(--text-secondary);">Choose the AI solution that fits your business needs</p>
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2.5rem; max-width: 1200px; margin: 0 auto;">
+                    <!-- Starter Bot -->
+                    <div class="pricing-card" style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border-color); border-radius: 20px; padding: 2.5rem; text-align: center; transition: all 0.3s;">
+                        <h3 style="font-size: 1.8rem; font-weight: 700; margin-bottom: 1rem;">Starter Bot</h3>
+                        <div style="margin: 2rem 0;">
+                            <span style="font-size: 3.5rem; font-weight: 800; color: var(--primary);">$2,997</span>
+                        </div>
+                        <ul style="list-style: none; padding: 0; margin: 2rem 0; text-align: left;">
+                            <li style="padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center;">
+                                <i class="fas fa-check" style="color: var(--primary); margin-right: 0.75rem;"></i>
+                                <span>AI Chatbot OR Voice Agent (pick one)</span>
+                            </li>
+                            <li style="padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center;">
+                                <i class="fas fa-check" style="color: var(--primary); margin-right: 0.75rem;"></i>
+                                <span>Up to 1,000 conversations/month</span>
+                            </li>
+                            <li style="padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center;">
+                                <i class="fas fa-check" style="color: var(--primary); margin-right: 0.75rem;"></i>
+                                <span>Basic CRM integration</span>
+                            </li>
+                            <li style="padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center;">
+                                <i class="fas fa-check" style="color: var(--primary); margin-right: 0.75rem;"></i>
+                                <span>Standard training on your business</span>
+                            </li>
+                            <li style="padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center;">
+                                <i class="fas fa-check" style="color: var(--primary); margin-right: 0.75rem;"></i>
+                                <span>Email support</span>
+                            </li>
+                            <li style="padding: 0.75rem 0; display: flex; align-items: center;">
+                                <i class="fas fa-check" style="color: var(--primary); margin-right: 0.75rem;"></i>
+                                <span>1 month free support after launch</span>
+                            </li>
+                        </ul>
+                        <a href="booking.html" class="btn btn-primary" style="width: 100%; justify-content: center;">Get Started</a>
+                    </div>
+
+                    <!-- Professional AI -->
+                    <div class="pricing-card" style="background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(59, 130, 246, 0.1)); border: 2px solid var(--primary); border-radius: 20px; padding: 2.5rem; text-align: center; position: relative; transform: scale(1.05); transition: all 0.3s;">
+                        <div style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: var(--primary); color: var(--white); padding: 0.5rem 1.5rem; border-radius: 20px; font-weight: 600; font-size: 0.9rem;">MOST POPULAR</div>
+                        <h3 style="font-size: 1.8rem; font-weight: 700; margin-bottom: 1rem;">Professional AI</h3>
+                        <div style="margin: 2rem 0;">
+                            <span style="font-size: 3.5rem; font-weight: 800; color: var(--primary);">$6,997</span>
+                        </div>
+                        <ul style="list-style: none; padding: 0; margin: 2rem 0; text-align: left;">
+                            <li style="padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center;">
+                                <i class="fas fa-check" style="color: var(--primary); margin-right: 0.75rem;"></i>
+                                <span><strong>AI Chatbot + Voice Agent (both)</strong></span>
+                            </li>
+                            <li style="padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center;">
+                                <i class="fas fa-check" style="color: var(--primary); margin-right: 0.75rem;"></i>
+                                <span>Unlimited conversations</span>
+                            </li>
+                            <li style="padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center;">
+                                <i class="fas fa-check" style="color: var(--primary); margin-right: 0.75rem;"></i>
+                                <span>Full CRM integration</span>
+                            </li>
+                            <li style="padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center;">
+                                <i class="fas fa-check" style="color: var(--primary); margin-right: 0.75rem;"></i>
+                                <span>Advanced training & customization</span>
+                            </li>
+                            <li style="padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center;">
+                                <i class="fas fa-check" style="color: var(--primary); margin-right: 0.75rem;"></i>
+                                <span>Lead qualification system</span>
+                            </li>
+                            <li style="padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center;">
+                                <i class="fas fa-check" style="color: var(--primary); margin-right: 0.75rem;"></i>
+                                <span>Priority support</span>
+                            </li>
+                            <li style="padding: 0.75rem 0; display: flex; align-items: center;">
+                                <i class="fas fa-check" style="color: var(--primary); margin-right: 0.75rem;"></i>
+                                <span>3 months free support after launch</span>
+                            </li>
+                        </ul>
+                        <a href="booking.html" class="btn btn-primary" style="width: 100%; justify-content: center;">Scale Now</a>
+                    </div>
+
+                    <!-- Enterprise Suite -->
+                    <div class="pricing-card" style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border-color); border-radius: 20px; padding: 2.5rem; text-align: center; transition: all 0.3s;">
+                        <h3 style="font-size: 1.8rem; font-weight: 700; margin-bottom: 1rem;">Enterprise Suite</h3>
+                        <div style="margin: 2rem 0;">
+                            <span style="font-size: 3.5rem; font-weight: 800; color: var(--primary);">Custom</span>
+                        </div>
+                        <ul style="list-style: none; padding: 0; margin: 2rem 0; text-align: left;">
+                            <li style="padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center;">
+                                <i class="fas fa-check" style="color: var(--primary); margin-right: 0.75rem;"></i>
+                                <span>Multiple AI chatbots & voice agents</span>
+                            </li>
+                            <li style="padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center;">
+                                <i class="fas fa-check" style="color: var(--primary); margin-right: 0.75rem;"></i>
+                                <span>Full business process automation</span>
+                            </li>
+                            <li style="padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center;">
+                                <i class="fas fa-check" style="color: var(--primary); margin-right: 0.75rem;"></i>
+                                <span>Multi-location support</span>
+                            </li>
+                            <li style="padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center;">
+                                <i class="fas fa-check" style="color: var(--primary); margin-right: 0.75rem;"></i>
+                                <span>Advanced analytics & reporting</span>
+                            </li>
+                            <li style="padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center;">
+                                <i class="fas fa-check" style="color: var(--primary); margin-right: 0.75rem;"></i>
+                                <span>Dedicated AI specialist</span>
+                            </li>
+                            <li style="padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center;">
+                                <i class="fas fa-check" style="color: var(--primary); margin-right: 0.75rem;"></i>
+                                <span>White-glove onboarding</span>
+                            </li>
+                            <li style="padding: 0.75rem 0; display: flex; align-items: center;">
+                                <i class="fas fa-check" style="color: var(--primary); margin-right: 0.75rem;"></i>
+                                <span>6 months premium support</span>
+                            </li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-primary" style="width: 100%; justify-content: center;">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA Section -->
+        <section style="padding: 100px 0; background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(59, 130, 246, 0.1)); text-align: center;">
+            <div class="container" style="max-width: 800px;">
+                <h2 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 1.5rem;">Ready to Automate Your Revenue?</h2>
+                <p style="font-size: 1.3rem; color: var(--text-secondary); margin-bottom: 3rem; line-height: 1.6;">
+                    Stop losing money to missed calls and slow responses. Let's build your custom AI solution.
+                </p>
+                <a href="booking.html" class="btn btn-primary" style="font-size: 1.2rem; padding: 1.2rem 3rem;">
+                    Get Your Free Consultation
+                </a>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>JAFF STUDIO</h3>
+                    <p>Transforming businesses through innovative digital solutions.</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/jaff_studio1/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://x.com/jaff_studio" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61571490585804" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="booking.html">Book Now</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html">Web Development</a></li>
+                        <li><a href="ai-solutions.html">AI Solutions</a></li>
+                        <li><a href="services.html">POS Systems</a></li>
+                        <li><a href="services.html">Social Media</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> contact@jaffstudio.com</li>
+                        <li><i class="fas fa-phone"></i> +41 (0) 44 123 4567</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Bahnhofstrasse 123, 8001 Zürich</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Jaff Studio. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress"></div>
+
+    <!-- AI Chatbot Widget -->
+    <div id="chat-widget" class="chat-widget">
+        <div class="chat-header">
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <div class="chat-avatar">🤖</div>
+                <div>
+                    <h3>AI Assistant</h3>
+                    <p><span class="chat-status"></span>Online</p>
+                </div>
+            </div>
+            <button id="chat-close">✕</button>
+        </div>
+        <div id="chat-messages" class="chat-messages"></div>
+        <div class="chat-input-container">
+            <input type="text" id="chat-input" placeholder="Type your message...">
+            <button id="chat-send"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <!-- Chat Toggle Button -->
+    <button id="chat-toggle" class="chat-toggle">
+        <i class="fas fa-comment"></i>
+        <span class="chat-badge">1</span>
+    </button>
+
+    <!-- Scripts -->
+    <script src="assets/js/3d-background.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/chatbot.js"></script>
+</body>
+</html>

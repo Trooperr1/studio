@@ -241,3 +241,180 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+
+// ============================================
+// DARK/LIGHT MODE TOGGLE
+// ============================================
+
+// Check for saved theme preference or default to 'dark'
+const currentTheme = localStorage.getItem('theme') || 'dark';
+document.body.setAttribute('data-theme', currentTheme);
+
+// Create theme toggle button
+const themeToggle = document.createElement('button');
+themeToggle.className = 'theme-toggle';
+themeToggle.setAttribute('aria-label', 'Toggle theme');
+themeToggle.innerHTML = currentTheme === 'dark' 
+    ? '<i class="fas fa-sun"></i>' 
+    : '<i class="fas fa-moon"></i>';
+document.body.appendChild(themeToggle);
+
+// Toggle theme
+themeToggle.addEventListener('click', () => {
+    const theme = document.body.getAttribute('data-theme');
+    const newTheme = theme === 'dark' ? 'light' : 'dark';
+    
+    document.body.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    
+    // Update icon
+    themeToggle.innerHTML = newTheme === 'dark' 
+        ? '<i class="fas fa-sun"></i>' 
+        : '<i class="fas fa-moon"></i>';
+});
+
+// ============================================
+// IMAGE LAZY LOADING
+// ============================================
+
+// Add lazy loading to all images
+document.addEventListener('DOMContentLoaded', () => {
+    const images = document.querySelectorAll('img[data-src]');
+    
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                img.src = img.dataset.src;
+                img.removeAttribute('data-src');
+                img.classList.add('loaded');
+                observer.unobserve(img);
+            }
+        });
+    });
+    
+    images.forEach(img => imageObserver.observe(img));
+});
+
+// ============================================
+// ACCESSIBILITY ENHANCEMENTS
+// ============================================
+
+// Keyboard navigation for cards and interactive elements
+document.querySelectorAll('.service-card, .feature-item, .pricing-card, .team-card, .blog-card').forEach(card => {
+    // Make cards focusable
+    if (!card.hasAttribute('tabindex')) {
+        card.setAttribute('tabindex', '0');
+    }
+    
+    // Add keyboard support
+    card.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            const link = card.querySelector('a, button');
+            if (link) link.click();
+        }
+    });
+    
+    // Add focus indicator
+    card.addEventListener('focus', function() {
+        this.style.outline = '2px solid var(--white)';
+        this.style.outlineOffset = '4px';
+    });
+    
+    card.addEventListener('blur', function() {
+        this.style.outline = 'none';
+    });
+});
+
+// Skip to main content link
+const skipLink = document.createElement('a');
+skipLink.href = '#main-content';
+skipLink.className = 'skip-link';
+skipLink.textContent = 'Skip to main content';
+skipLink.style.cssText = `
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--white);
+    color: var(--primary-black);
+    padding: 8px 16px;
+    text-decoration: none;
+    z-index: 100;
+    border-radius: 0 0 4px 0;
+`;
+skipLink.addEventListener('focus', function() {
+    this.style.top = '0';
+});
+skipLink.addEventListener('blur', function() {
+    this.style.top = '-40px';
+});
+document.body.insertBefore(skipLink, document.body.firstChild);
+
+// Add main content ID if not exists
+const contentWrapper = document.querySelector('.content-wrapper');
+if (contentWrapper && !contentWrapper.id) {
+    contentWrapper.id = 'main-content';
+}
+
+// Enhanced ARIA labels for interactive elements
+document.querySelectorAll('button:not([aria-label])').forEach(button => {
+    const text = button.textContent.trim() || button.querySelector('i')?.className || 'Button';
+    if (!button.getAttribute('aria-label')) {
+        button.setAttribute('aria-label', text);
+    }
+});
+
+// Screen reader announcements
+const announcer = document.createElement('div');
+announcer.setAttribute('aria-live', 'polite');
+announcer.setAttribute('aria-atomic', 'true');
+announcer.className = 'sr-only';
+announcer.style.cssText = `
+    position: absolute;
+    left: -10000px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+`;
+document.body.appendChild(announcer);
+
+// Announce page loads
+window.addEventListener('load', () => {
+    setTimeout(() => {
+        announcer.textContent = 'Page loaded successfully';
+    }, 1000);
+});
+
+// Focus management for modals and chat
+const chatWidget = document.getElementById('chat-widget');
+const chatToggle = document.getElementById('chat-toggle');
+
+if (chatToggle && chatWidget) {
+    const originalChatToggleListener = chatToggle.onclick;
+    chatToggle.addEventListener('click', () => {
+        setTimeout(() => {
+            if (chatWidget.classList.contains('open')) {
+                const chatInput = document.getElementById('chat-input');
+                if (chatInput) chatInput.focus();
+                announcer.textContent = 'Chat opened';
+            } else {
+                announcer.textContent = 'Chat closed';
+            }
+        }, 100);
+    });
+}
+
+// Keyboard escape to close chat
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        if (chatWidget && chatWidget.classList.contains('open')) {
+            const chatClose = document.getElementById('chat-close');
+            if (chatClose) chatClose.click();
+        }
+    }
+});
+
+console.log('✓ Accessibility features loaded');
+console.log('✓ Theme toggle loaded');
+console.log('✓ Image lazy loading ready');

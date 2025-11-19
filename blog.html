@@ -76,6 +76,30 @@
             </div>
         </section>
 
+        <!-- Blog Search and Filter -->
+        <section class="features">
+            <div class="container">
+                <!-- Search Bar -->
+                <div class="blog-search-container" style="max-width: 800px; margin: 0 auto 3rem;">
+                    <div style="position: relative;">
+                        <input type="text" id="blogSearch" placeholder="Search articles..." style="width: 100%; padding: 1.2rem 3rem 1.2rem 1.5rem; background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border-color); border-radius: 50px; color: var(--white); font-size: 1rem; font-family: inherit;">
+                        <i class="fas fa-search" style="position: absolute; right: 1.5rem; top: 50%; transform: translateY(-50%); color: var(--medium-gray);"></i>
+                    </div>
+                </div>
+
+                <!-- Category Filters -->
+                <div class="blog-categories" style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin-bottom: 3rem;">
+                    <button class="category-btn active" data-category="all" style="padding: 0.8rem 1.5rem; background: var(--white); color: var(--black); border: none; border-radius: 50px; cursor: pointer; font-weight: 600; transition: all 0.3s;">All</button>
+                    <button class="category-btn" data-category="Web Development" style="padding: 0.8rem 1.5rem; background: rgba(255, 255, 255, 0.05); color: var(--white); border: 1px solid var(--border-color); border-radius: 50px; cursor: pointer; font-weight: 600; transition: all 0.3s;">Web Development</button>
+                    <button class="category-btn" data-category="AI & Machine Learning" style="padding: 0.8rem 1.5rem; background: rgba(255, 255, 255, 0.05); color: var(--white); border: 1px solid var(--border-color); border-radius: 50px; cursor: pointer; font-weight: 600; transition: all 0.3s;">AI & ML</button>
+                    <button class="category-btn" data-category="Design" style="padding: 0.8rem 1.5rem; background: rgba(255, 255, 255, 0.05); color: var(--white); border: 1px solid var(--border-color); border-radius: 50px; cursor: pointer; font-weight: 600; transition: all 0.3s;">Design</button>
+                    <button class="category-btn" data-category="Social Media" style="padding: 0.8rem 1.5rem; background: rgba(255, 255, 255, 0.05); color: var(--white); border: 1px solid var(--border-color); border-radius: 50px; cursor: pointer; font-weight: 600; transition: all 0.3s;">Social Media</button>
+                    <button class="category-btn" data-category="Performance" style="padding: 0.8rem 1.5rem; background: rgba(255, 255, 255, 0.05); color: var(--white); border: 1px solid var(--border-color); border-radius: 50px; cursor: pointer; font-weight: 600; transition: all 0.3s;">Performance</button>
+                    <button class="category-btn" data-category="Security" style="padding: 0.8rem 1.5rem; background: rgba(255, 255, 255, 0.05); color: var(--white); border: 1px solid var(--border-color); border-radius: 50px; cursor: pointer; font-weight: 600; transition: all 0.3s;">Security</button>
+                </div>
+            </div>
+        </section>
+
         <!-- Blog Grid -->
         <section class="services">
             <div class="container">
@@ -99,7 +123,15 @@
                                 Exploring emerging trends and technologies that will shape the web development
                                 landscape in the coming year. From AI integration to new frameworks.
                             </p>
-                            <a href="#" class="blog-read-more">Read More →</a>
+                            <div class="blog-actions" style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--border-color);">
+                                <a href="#" class="blog-read-more">Read More →</a>
+                                <div class="blog-share" style="display: flex; gap: 0.5rem;">
+                                    <a href="#" onclick="shareOnFacebook(event)" title="Share on Facebook" style="color: var(--medium-gray); transition: color 0.3s;"><i class="fab fa-facebook"></i></a>
+                                    <a href="#" onclick="shareOnTwitter(event)" title="Share on Twitter" style="color: var(--medium-gray); transition: color 0.3s;"><i class="fab fa-x-twitter"></i></a>
+                                    <a href="#" onclick="shareOnLinkedIn(event)" title="Share on LinkedIn" style="color: var(--medium-gray); transition: color 0.3s;"><i class="fab fa-linkedin"></i></a>
+                                    <a href="#" onclick="copyLink(event)" title="Copy link" style="color: var(--medium-gray); transition: color 0.3s;"><i class="fas fa-link"></i></a>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -119,7 +151,15 @@
                                 Discover practical ways small businesses can leverage artificial intelligence
                                 to automate tasks, improve customer service, and boost profitability.
                             </p>
-                            <a href="#" class="blog-read-more">Read More →</a>
+                            <div class="blog-actions" style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--border-color);">
+                                <a href="#" class="blog-read-more">Read More →</a>
+                                <div class="blog-share" style="display: flex; gap: 0.5rem;">
+                                    <a href="#" onclick="shareOnFacebook(event)" title="Share on Facebook" style="color: var(--medium-gray); transition: color 0.3s;"><i class="fab fa-facebook"></i></a>
+                                    <a href="#" onclick="shareOnTwitter(event)" title="Share on Twitter" style="color: var(--medium-gray); transition: color 0.3s;"><i class="fab fa-x-twitter"></i></a>
+                                    <a href="#" onclick="shareOnLinkedIn(event)" title="Share on LinkedIn" style="color: var(--medium-gray); transition: color 0.3s;"><i class="fab fa-linkedin"></i></a>
+                                    <a href="#" onclick="copyLink(event)" title="Copy link" style="color: var(--medium-gray); transition: color 0.3s;"><i class="fas fa-link"></i></a>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -139,7 +179,15 @@
                                 Learn the fundamental principles of effective UI/UX design that create
                                 intuitive, user-friendly experiences your customers will love.
                             </p>
-                            <a href="#" class="blog-read-more">Read More →</a>
+                            <div class="blog-actions" style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--border-color);">
+                                <a href="#" class="blog-read-more">Read More →</a>
+                                <div class="blog-share" style="display: flex; gap: 0.5rem;">
+                                    <a href="#" onclick="shareOnFacebook(event)" title="Share on Facebook" style="color: var(--medium-gray); transition: color 0.3s;"><i class="fab fa-facebook"></i></a>
+                                    <a href="#" onclick="shareOnTwitter(event)" title="Share on Twitter" style="color: var(--medium-gray); transition: color 0.3s;"><i class="fab fa-x-twitter"></i></a>
+                                    <a href="#" onclick="shareOnLinkedIn(event)" title="Share on LinkedIn" style="color: var(--medium-gray); transition: color 0.3s;"><i class="fab fa-linkedin"></i></a>
+                                    <a href="#" onclick="copyLink(event)" title="Copy link" style="color: var(--medium-gray); transition: color 0.3s;"><i class="fas fa-link"></i></a>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -159,7 +207,15 @@
                                 Building an effective social media presence requires strategy. Here's how
                                 to create content that engages and converts your target audience.
                             </p>
-                            <a href="#" class="blog-read-more">Read More →</a>
+                            <div class="blog-actions" style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--border-color);">
+                                <a href="#" class="blog-read-more">Read More →</a>
+                                <div class="blog-share" style="display: flex; gap: 0.5rem;">
+                                    <a href="#" onclick="shareOnFacebook(event)" title="Share on Facebook" style="color: var(--medium-gray); transition: color 0.3s;"><i class="fab fa-facebook"></i></a>
+                                    <a href="#" onclick="shareOnTwitter(event)" title="Share on Twitter" style="color: var(--medium-gray); transition: color 0.3s;"><i class="fab fa-x-twitter"></i></a>
+                                    <a href="#" onclick="shareOnLinkedIn(event)" title="Share on LinkedIn" style="color: var(--medium-gray); transition: color 0.3s;"><i class="fab fa-linkedin"></i></a>
+                                    <a href="#" onclick="copyLink(event)" title="Copy link" style="color: var(--medium-gray); transition: color 0.3s;"><i class="fas fa-link"></i></a>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -179,7 +235,15 @@
                                 Page speed matters. Learn advanced techniques to optimize your website's
                                 performance and provide lightning-fast user experiences.
                             </p>
-                            <a href="#" class="blog-read-more">Read More →</a>
+                            <div class="blog-actions" style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--border-color);">
+                                <a href="#" class="blog-read-more">Read More →</a>
+                                <div class="blog-share" style="display: flex; gap: 0.5rem;">
+                                    <a href="#" onclick="shareOnFacebook(event)" title="Share on Facebook" style="color: var(--medium-gray); transition: color 0.3s;"><i class="fab fa-facebook"></i></a>
+                                    <a href="#" onclick="shareOnTwitter(event)" title="Share on Twitter" style="color: var(--medium-gray); transition: color 0.3s;"><i class="fab fa-x-twitter"></i></a>
+                                    <a href="#" onclick="shareOnLinkedIn(event)" title="Share on LinkedIn" style="color: var(--medium-gray); transition: color 0.3s;"><i class="fab fa-linkedin"></i></a>
+                                    <a href="#" onclick="copyLink(event)" title="Copy link" style="color: var(--medium-gray); transition: color 0.3s;"><i class="fas fa-link"></i></a>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -199,7 +263,15 @@
                                 Protect your website and users with these essential security measures.
                                 From SSL certificates to secure authentication practices.
                             </p>
-                            <a href="#" class="blog-read-more">Read More →</a>
+                            <div class="blog-actions" style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--border-color);">
+                                <a href="#" class="blog-read-more">Read More →</a>
+                                <div class="blog-share" style="display: flex; gap: 0.5rem;">
+                                    <a href="#" onclick="shareOnFacebook(event)" title="Share on Facebook" style="color: var(--medium-gray); transition: color 0.3s;"><i class="fab fa-facebook"></i></a>
+                                    <a href="#" onclick="shareOnTwitter(event)" title="Share on Twitter" style="color: var(--medium-gray); transition: color 0.3s;"><i class="fab fa-x-twitter"></i></a>
+                                    <a href="#" onclick="shareOnLinkedIn(event)" title="Share on LinkedIn" style="color: var(--medium-gray); transition: color 0.3s;"><i class="fab fa-linkedin"></i></a>
+                                    <a href="#" onclick="copyLink(event)" title="Copy link" style="color: var(--medium-gray); transition: color 0.3s;"><i class="fas fa-link"></i></a>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -219,7 +291,15 @@
                                 Everything you need to know about launching and growing a profitable
                                 e-commerce business in today's competitive market.
                             </p>
-                            <a href="#" class="blog-read-more">Read More →</a>
+                            <div class="blog-actions" style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--border-color);">
+                                <a href="#" class="blog-read-more">Read More →</a>
+                                <div class="blog-share" style="display: flex; gap: 0.5rem;">
+                                    <a href="#" onclick="shareOnFacebook(event)" title="Share on Facebook" style="color: var(--medium-gray); transition: color 0.3s;"><i class="fab fa-facebook"></i></a>
+                                    <a href="#" onclick="shareOnTwitter(event)" title="Share on Twitter" style="color: var(--medium-gray); transition: color 0.3s;"><i class="fab fa-x-twitter"></i></a>
+                                    <a href="#" onclick="shareOnLinkedIn(event)" title="Share on LinkedIn" style="color: var(--medium-gray); transition: color 0.3s;"><i class="fab fa-linkedin"></i></a>
+                                    <a href="#" onclick="copyLink(event)" title="Copy link" style="color: var(--medium-gray); transition: color 0.3s;"><i class="fas fa-link"></i></a>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -239,7 +319,15 @@
                                 How to use analytics to make informed business decisions. Understanding
                                 metrics that matter and turning data into actionable insights.
                             </p>
-                            <a href="#" class="blog-read-more">Read More →</a>
+                            <div class="blog-actions" style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--border-color);">
+                                <a href="#" class="blog-read-more">Read More →</a>
+                                <div class="blog-share" style="display: flex; gap: 0.5rem;">
+                                    <a href="#" onclick="shareOnFacebook(event)" title="Share on Facebook" style="color: var(--medium-gray); transition: color 0.3s;"><i class="fab fa-facebook"></i></a>
+                                    <a href="#" onclick="shareOnTwitter(event)" title="Share on Twitter" style="color: var(--medium-gray); transition: color 0.3s;"><i class="fab fa-x-twitter"></i></a>
+                                    <a href="#" onclick="shareOnLinkedIn(event)" title="Share on LinkedIn" style="color: var(--medium-gray); transition: color 0.3s;"><i class="fab fa-linkedin"></i></a>
+                                    <a href="#" onclick="copyLink(event)" title="Copy link" style="color: var(--medium-gray); transition: color 0.3s;"><i class="fas fa-link"></i></a>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -259,8 +347,166 @@
                                 A comprehensive guide to successfully transforming your traditional
                                 business into a digital-first organization.
                             </p>
+                            <div class="blog-actions" style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--border-color);">
+                                <a href="#" class="blog-read-more">Read More →</a>
+                                <div class="blog-share" style="display: flex; gap: 0.5rem;">
+                                    <a href="#" onclick="shareOnFacebook(event)" title="Share on Facebook" style="color: var(--medium-gray); transition: color 0.3s;"><i class="fab fa-facebook"></i></a>
+                                    <a href="#" onclick="shareOnTwitter(event)" title="Share on Twitter" style="color: var(--medium-gray); transition: color 0.3s;"><i class="fab fa-x-twitter"></i></a>
+                                    <a href="#" onclick="shareOnLinkedIn(event)" title="Share on LinkedIn" style="color: var(--medium-gray); transition: color 0.3s;"><i class="fab fa-linkedin"></i></a>
+                                    <a href="#" onclick="copyLink(event)" title="Copy link" style="color: var(--medium-gray); transition: color 0.3s;"><i class="fas fa-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Related Posts Section -->
+        <section class="services">
+            <div class="container">
+                <h2 class="section-title">Related Articles</h2>
+                <p class="section-subtitle">You might also be interested in</p>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem;">
+                    <!-- Related Post 1 -->
+                    <div class="blog-card">
+                        <div class="blog-image">
+                            <span>💡</span>
+                        </div>
+                        <div class="blog-content">
+                            <span class="blog-category">Innovation</span>
+                            <div class="blog-meta">
+                                <span><i class="far fa-calendar"></i> Nov 20, 2024</span>
+                                <span><i class="far fa-clock"></i> 6 min read</span>
+                            </div>
+                            <h3>Innovation in Tech 2025</h3>
+                            <p>
+                                Discover the latest innovations that will revolutionize the tech industry
+                                in the coming year.
+                            </p>
                             <a href="#" class="blog-read-more">Read More →</a>
                         </div>
+                    </div>
+
+                    <!-- Related Post 2 -->
+                    <div class="blog-card">
+                        <div class="blog-image">
+                            <span>🚀</span>
+                        </div>
+                        <div class="blog-content">
+                            <span class="blog-category">Startups</span>
+                            <div class="blog-meta">
+                                <span><i class="far fa-calendar"></i> Nov 18, 2024</span>
+                                <span><i class="far fa-clock"></i> 4 min read</span>
+                            </div>
+                            <h3>Startup Success Stories</h3>
+                            <p>
+                                Learn from successful startups and their journey from idea to
+                                profitable business.
+                            </p>
+                            <a href="#" class="blog-read-more">Read More →</a>
+                        </div>
+                    </div>
+
+                    <!-- Related Post 3 -->
+                    <div class="blog-card">
+                        <div class="blog-image">
+                            <span>📈</span>
+                        </div>
+                        <div class="blog-content">
+                            <span class="blog-category">Growth</span>
+                            <div class="blog-meta">
+                                <span><i class="far fa-calendar"></i> Nov 16, 2024</span>
+                                <span><i class="far fa-clock"></i> 7 min read</span>
+                            </div>
+                            <h3>Scaling Your Business</h3>
+                            <p>
+                                Proven strategies for scaling your business efficiently while
+                                maintaining quality.
+                            </p>
+                            <a href="#" class="blog-read-more">Read More →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Comment Section -->
+        <section class="features">
+            <div class="container" style="max-width: 900px;">
+                <h2 class="section-title">Leave a Comment</h2>
+                <p class="section-subtitle">Share your thoughts with us</p>
+
+                <form id="commentForm" style="margin-top: 3rem; background: rgba(255, 255, 255, 0.03); padding: 3rem; border-radius: 20px; border: 1px solid var(--border-color);">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
+                        <div>
+                            <label for="commentName" style="display: block; margin-bottom: 0.5rem; color: var(--white); font-weight: 600;">Name *</label>
+                            <input type="text" id="commentName" required
+                                   style="width: 100%; padding: 1rem; background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border-color); border-radius: 10px; color: var(--white); font-size: 1rem; font-family: inherit;">
+                        </div>
+                        <div>
+                            <label for="commentEmail" style="display: block; margin-bottom: 0.5rem; color: var(--white); font-weight: 600;">Email *</label>
+                            <input type="email" id="commentEmail" required
+                                   style="width: 100%; padding: 1rem; background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border-color); border-radius: 10px; color: var(--white); font-size: 1rem; font-family: inherit;">
+                        </div>
+                    </div>
+
+                    <div style="margin-bottom: 1.5rem;">
+                        <label for="commentMessage" style="display: block; margin-bottom: 0.5rem; color: var(--white); font-weight: 600;">Comment *</label>
+                        <textarea id="commentMessage" required rows="6"
+                                  style="width: 100%; padding: 1rem; background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border-color); border-radius: 10px; color: var(--white); font-size: 1rem; font-family: inherit; resize: vertical;"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">
+                        <i class="fas fa-paper-plane"></i> Submit Comment
+                    </button>
+                </form>
+
+                <!-- Existing Comments -->
+                <div style="margin-top: 4rem;">
+                    <h3 style="margin-bottom: 2rem; color: var(--white);">Recent Comments (3)</h3>
+
+                    <!-- Comment 1 -->
+                    <div style="background: rgba(255, 255, 255, 0.03); padding: 2rem; border-radius: 15px; border: 1px solid var(--border-color); margin-bottom: 1.5rem;">
+                        <div style="display: flex; gap: 1rem; margin-bottom: 1rem;">
+                            <div style="width: 50px; height: 50px; border-radius: 50%; background: linear-gradient(135deg, var(--white) 0%, var(--medium-gray) 100%); display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">👤</div>
+                            <div>
+                                <h4 style="margin-bottom: 0.25rem; color: var(--white);">Sarah Johnson</h4>
+                                <p style="color: var(--medium-gray); font-size: 0.9rem;"><i class="far fa-clock"></i> 2 days ago</p>
+                            </div>
+                        </div>
+                        <p style="color: var(--light-gray); line-height: 1.8;">
+                            Great article! The insights on web development trends are spot on. I'm particularly excited about AI integration in web apps.
+                        </p>
+                    </div>
+
+                    <!-- Comment 2 -->
+                    <div style="background: rgba(255, 255, 255, 0.03); padding: 2rem; border-radius: 15px; border: 1px solid var(--border-color); margin-bottom: 1.5rem;">
+                        <div style="display: flex; gap: 1rem; margin-bottom: 1rem;">
+                            <div style="width: 50px; height: 50px; border-radius: 50%; background: linear-gradient(135deg, var(--white) 0%, var(--medium-gray) 100%); display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">👤</div>
+                            <div>
+                                <h4 style="margin-bottom: 0.25rem; color: var(--white);">Michael Chen</h4>
+                                <p style="color: var(--medium-gray); font-size: 0.9rem;"><i class="far fa-clock"></i> 3 days ago</p>
+                            </div>
+                        </div>
+                        <p style="color: var(--light-gray); line-height: 1.8;">
+                            Thanks for sharing this comprehensive guide. The practical examples make it easy to understand complex concepts.
+                        </p>
+                    </div>
+
+                    <!-- Comment 3 -->
+                    <div style="background: rgba(255, 255, 255, 0.03); padding: 2rem; border-radius: 15px; border: 1px solid var(--border-color);">
+                        <div style="display: flex; gap: 1rem; margin-bottom: 1rem;">
+                            <div style="width: 50px; height: 50px; border-radius: 50%; background: linear-gradient(135deg, var(--white) 0%, var(--medium-gray) 100%); display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">👤</div>
+                            <div>
+                                <h4 style="margin-bottom: 0.25rem; color: var(--white);">Emily Rodriguez</h4>
+                                <p style="color: var(--medium-gray); font-size: 0.9rem;"><i class="far fa-clock"></i> 1 week ago</p>
+                            </div>
+                        </div>
+                        <p style="color: var(--light-gray); line-height: 1.8;">
+                            Excellent content as always! Looking forward to more articles on this topic.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -375,5 +621,6 @@
     <script src="assets/js/3d-background.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/chatbot.js"></script>
+    <script src="assets/js/blog.js"></script>
 </body>
 </html>

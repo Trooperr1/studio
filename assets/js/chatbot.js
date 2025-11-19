@@ -179,7 +179,7 @@ class AIAssistant {
 
         // Contact related
         if (lowerMessage.includes('contact') || lowerMessage.includes('phone')) {
-            return 'You can reach us at info@jaffstudio.com or call +1 (555) 123-4567. You can also fill out our contact form and we\'ll get back to you within 24 hours!';
+            return 'You can reach us at contact@jaffstudio.com or call +1 (555) 123-4567. You can also fill out our contact form and we\'ll get back to you within 24 hours!';
         }
 
         // Email capture
@@ -212,7 +212,7 @@ class AIAssistant {
         }
 
         // Default response
-        return 'That\'s a great question! I\'d love to give you detailed information. You can also contact our team directly at info@jaffstudio.com or fill out our contact form for personalized assistance!';
+        return 'That\'s a great question! I\'d love to give you detailed information. You can also contact our team directly at contact@jaffstudio.com or fill out our contact form for personalized assistance!';
     }
 }
 

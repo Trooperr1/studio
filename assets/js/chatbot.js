@@ -11,6 +11,9 @@ class AIAssistant {
         this.chatInput = document.getElementById('chat-input');
         this.chatSend = document.getElementById('chat-send');
         this.isOpen = false;
+        this.messageCount = 0;
+        this.userEmail = null;
+        this.askedForEmail = false;
 
         this.init();
     }
@@ -55,6 +58,18 @@ class AIAssistant {
         // Add user message
         this.addMessage(message, 'user');
         this.chatInput.value = '';
+        this.messageCount++;
+
+        // Check if message contains an email
+        if (!this.userEmail && this.isValidEmail(message)) {
+            this.userEmail = message;
+            this.showTyping();
+            setTimeout(() => {
+                this.hideTyping();
+                this.addMessage(`Thank you! I've saved your email: ${this.userEmail}. Our team will reach out to you soon! How else can I help you today?`, 'bot');
+            }, 1000);
+            return;
+        }
 
         // Show typing indicator
         this.showTyping();
@@ -64,7 +79,24 @@ class AIAssistant {
             this.hideTyping();
             const response = this.getAIResponse(message);
             this.addMessage(response, 'bot');
+
+            // Ask for email after 3 messages if not provided
+            if (!this.userEmail && !this.askedForEmail && this.messageCount >= 3) {
+                this.askedForEmail = true;
+                setTimeout(() => {
+                    this.showTyping();
+                    setTimeout(() => {
+                        this.hideTyping();
+                        this.addMessage('By the way, if you\'d like us to follow up with you, please share your email address. We\'ll send you more information and exclusive offers! 📧', 'bot');
+                    }, 1000);
+                }, 2000);
+            }
         }, 1000 + Math.random() * 1000);
+    }
+
+    isValidEmail(email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
     }
 
     addMessage(text, sender) {
@@ -146,8 +178,13 @@ class AIAssistant {
         }
 
         // Contact related
-        if (lowerMessage.includes('contact') || lowerMessage.includes('email') || lowerMessage.includes('phone')) {
+        if (lowerMessage.includes('contact') || lowerMessage.includes('phone')) {
             return 'You can reach us at info@jaffstudio.com or call +1 (555) 123-4567. You can also fill out our contact form and we\'ll get back to you within 24 hours!';
+        }
+
+        // Email capture
+        if (lowerMessage.includes('email') && !this.userEmail) {
+            return 'Great! Please share your email address and I\'ll make sure our team follows up with you. Just type it in the chat! 📧';
         }
 
         // Portfolio/Projects

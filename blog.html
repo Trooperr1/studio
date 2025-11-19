@@ -345,8 +345,31 @@
         </div>
     </footer>
 
+    <!-- AI Chatbot Toggle Button -->
+    <div id="chat-toggle">🤖</div>
+
+    <!-- AI Chatbot Widget -->
+    <div id="chat-widget">
+        <div class="chat-header">
+            <div class="chat-header-info">
+                <div class="chat-avatar">🤖</div>
+                <div class="chat-header-text">
+                    <h3>AI Assistant</h3>
+                    <p><span class="chat-status"></span>Online</p>
+                </div>
+            </div>
+            <button id="chat-close">✕</button>
+        </div>
+        <div id="chat-messages"></div>
+        <div class="chat-input-container">
+            <input type="text" id="chat-input" placeholder="Type your message...">
+            <button id="chat-send">➤</button>
+        </div>
+    </div>
+
     <!-- Scripts -->
     <script src="assets/js/3d-background.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/chatbot.js"></script>
 </body>
 </html>

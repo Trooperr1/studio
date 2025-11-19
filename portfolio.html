@@ -55,6 +55,17 @@
                 <li><a href="booking.html">Book Now</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
+            <div class="language-selector">
+                <button id="language-btn" class="language-btn" title="Change language">
+                    <span id="current-lang">EN</span>
+                    <i class="fas fa-globe"></i>
+                </button>
+                <div id="language-dropdown" class="language-dropdown">
+                    <button class="lang-option" data-lang="en">🇬🇧 English</button>
+                    <button class="lang-option" data-lang="fr">🇫🇷 Français</button>
+                    <button class="lang-option" data-lang="de">🇩🇪 Deutsch</button>
+                </div>
+            </div>
             <button class="menu-toggle">
                 <span></span>
                 <span></span>
@@ -401,6 +412,7 @@
     </div>
 
     <!-- Scripts -->
+    <script src="assets/js/translations.js"></script>
     <script src="assets/js/3d-background.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/portfolio.js"></script>

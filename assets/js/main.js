@@ -214,3 +214,199 @@ document.querySelectorAll('.portfolio-item, .blog-card, .team-member, .pricing-c
     el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
     observer.observe(el);
 });
+
+// ============================================
+// LANGUAGE SWITCHING
+// ============================================
+
+// Language selector functionality
+document.addEventListener('DOMContentLoaded', () => {
+    const languageBtn = document.getElementById('language-btn');
+    const languageDropdown = document.getElementById('language-dropdown');
+    const currentLangSpan = document.getElementById('current-lang');
+    const langOptions = document.querySelectorAll('.lang-option');
+
+    if (!languageBtn || !languageDropdown) return;
+
+    // Load saved language
+    const savedLang = getCurrentLanguage();
+    updateLanguageDisplay(savedLang);
+
+    // Toggle dropdown
+    languageBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        languageDropdown.classList.toggle('show');
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.language-selector')) {
+            languageDropdown.classList.remove('show');
+        }
+    });
+
+    // Handle language selection
+    langOptions.forEach(option => {
+        option.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const selectedLang = option.getAttribute('data-lang');
+
+            if (setLanguage(selectedLang)) {
+                updateLanguageDisplay(selectedLang);
+                languageDropdown.classList.remove('show');
+
+                // Dispatch event for other components (like chatbot)
+                window.dispatchEvent(new CustomEvent('languageChanged', {
+                    detail: { language: selectedLang }
+                }));
+
+                // Update page content if needed
+                updatePageLanguage(selectedLang);
+            }
+        });
+    });
+
+    function updateLanguageDisplay(lang) {
+        const langMap = {
+            'en': 'EN',
+            'fr': 'FR',
+            'de': 'DE'
+        };
+        if (currentLangSpan) {
+            currentLangSpan.textContent = langMap[lang] || 'EN';
+        }
+
+        // Update active state
+        langOptions.forEach(opt => {
+            if (opt.getAttribute('data-lang') === lang) {
+                opt.classList.add('active');
+            } else {
+                opt.classList.remove('active');
+            }
+        });
+    }
+
+    function updatePageLanguage(lang) {
+        // Update navigation links (data-translate attributes)
+        document.querySelectorAll('[data-translate]').forEach(element => {
+            const key = element.getAttribute('data-translate');
+            element.textContent = getTranslation(key, lang);
+        });
+
+        // Update any buttons or CTAs with translations
+        updateCommonElements(lang);
+    }
+
+    function updateCommonElements(lang) {
+        // Update common buttons if they exist
+        const bookButtons = document.querySelectorAll('.btn-primary, .btn-secondary');
+        bookButtons.forEach(btn => {
+            const href = btn.getAttribute('href');
+            if (href && href.includes('booking.html')) {
+                btn.textContent = getTranslation('common.bookConsultation', lang);
+            }
+        });
+    }
+});
+
+// Add CSS for language selector
+const style = document.createElement('style');
+style.textContent = `
+    .language-selector {
+        position: relative;
+        margin-left: 1rem;
+    }
+
+    .language-btn {
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid var(--border-color);
+        padding: 0.5rem 1rem;
+        border-radius: 8px;
+        color: var(--white);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-weight: 600;
+        transition: all 0.3s;
+    }
+
+    .language-btn:hover {
+        background: rgba(255, 255, 255, 0.2);
+        border-color: var(--white);
+    }
+
+    .language-dropdown {
+        position: absolute;
+        top: calc(100% + 0.5rem);
+        right: 0;
+        background: rgba(10, 10, 10, 0.98);
+        border: 1px solid var(--border-color);
+        border-radius: 10px;
+        padding: 0.5rem;
+        min-width: 150px;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: all 0.3s;
+        z-index: 1000;
+        backdrop-filter: blur(10px);
+    }
+
+    .language-dropdown.show {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .lang-option {
+        width: 100%;
+        background: transparent;
+        border: none;
+        padding: 0.75rem 1rem;
+        color: var(--white);
+        cursor: pointer;
+        text-align: left;
+        border-radius: 6px;
+        transition: all 0.2s;
+        font-size: 0.95rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .lang-option:hover {
+        background: rgba(255, 255, 255, 0.1);
+    }
+
+    .lang-option.active {
+        background: rgba(255, 255, 255, 0.15);
+        font-weight: 600;
+    }
+
+    .quick-option-btn {
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid var(--border-color);
+        padding: 0.8rem 1rem;
+        border-radius: 8px;
+        color: var(--white);
+        cursor: pointer;
+        transition: all 0.3s;
+        font-size: 0.95rem;
+        text-align: left;
+    }
+
+    .quick-option-btn:hover {
+        background: rgba(255, 255, 255, 0.2);
+        border-color: var(--white);
+        transform: translateX(5px);
+    }
+
+    @media (max-width: 768px) {
+        .language-selector {
+            margin-left: 0;
+            margin-right: 1rem;
+        }
+    }
+`;
+document.head.appendChild(style);

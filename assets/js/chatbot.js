@@ -1,5 +1,5 @@
 // ============================================
-// JAFF STUDIO - AI CHATBOT (Multi-language)
+// JAFF STUDIO - AI CHATBOT
 // ============================================
 
 class AIAssistant {
@@ -14,15 +14,11 @@ class AIAssistant {
         this.messageCount = 0;
         this.userEmail = null;
         this.askedForEmail = false;
-        this.currentLang = getCurrentLanguage();
 
         this.init();
     }
 
     init() {
-        // Update UI language
-        this.updateLanguage();
-
         // Toggle chat window
         this.chatToggle.addEventListener('click', () => this.toggleChat());
         this.chatClose.addEventListener('click', () => this.toggleChat());
@@ -37,38 +33,11 @@ class AIAssistant {
             }
         });
 
-        // Listen for language changes
-        window.addEventListener('languageChanged', (e) => {
-            this.currentLang = e.detail.language;
-            this.updateLanguage();
-        });
-
         // Welcome message
         setTimeout(() => {
-            this.addMessage(getTranslation('chatbot.greeting', this.currentLang), 'bot');
+            this.addMessage('Hello! 👋 Welcome to Jaff Studio! I\'m here to help you with our services. How can I assist you today?', 'bot');
             this.showQuickOptions();
         }, 1000);
-    }
-
-    updateLanguage() {
-        // Update chat header
-        const headerTitle = document.querySelector('.chat-header-text h3');
-        const headerStatus = document.querySelector('.chat-header-text p');
-
-        if (headerTitle) {
-            headerTitle.textContent = getTranslation('chatbot.title', this.currentLang);
-        }
-        if (headerStatus) {
-            const statusSpan = headerStatus.querySelector('.chat-status');
-            if (statusSpan) {
-                headerStatus.innerHTML = `<span class="chat-status"></span>${getTranslation('chatbot.status', this.currentLang)}`;
-            }
-        }
-
-        // Update input placeholder
-        if (this.chatInput) {
-            this.chatInput.placeholder = getTranslation('chatbot.placeholder', this.currentLang);
-        }
     }
 
     toggleChat() {
@@ -96,11 +65,11 @@ class AIAssistant {
 
         const buttonsHTML = `
             <div style="display: grid; gap: 0.5rem; margin-top: 0.5rem;">
-                <button class="quick-option-btn" data-action="services">${getTranslation('chatbot.options.services', this.currentLang)}</button>
-                <button class="quick-option-btn" data-action="pricing">${getTranslation('chatbot.options.pricing', this.currentLang)}</button>
-                <button class="quick-option-btn" data-action="portfolio">${getTranslation('chatbot.options.portfolio', this.currentLang)}</button>
-                <button class="quick-option-btn" data-action="booking">${getTranslation('chatbot.options.booking', this.currentLang)}</button>
-                <button class="quick-option-btn" data-action="contact">${getTranslation('chatbot.options.contact', this.currentLang)}</button>
+                <button class="quick-option-btn" data-action="services">Our Services</button>
+                <button class="quick-option-btn" data-action="pricing">Pricing</button>
+                <button class="quick-option-btn" data-action="portfolio">Portfolio</button>
+                <button class="quick-option-btn" data-action="booking">Book a Consultation</button>
+                <button class="quick-option-btn" data-action="contact">Contact Us</button>
             </div>
         `;
 
@@ -123,16 +92,29 @@ class AIAssistant {
     }
 
     handleQuickOption(action) {
+        const responses = {
+            services: 'Our Services:\n\n🌐 Web Development - Custom websites and web applications\n🤖 AI Solutions - Chatbots and intelligent automation\n💳 POS Systems - Modern point-of-sale solutions\n📱 Social Media Management - Complete digital presence\n\nWant to learn more about any specific service?',
+            pricing: 'Our Pricing:\n\n💎 Premium Package - $999/month (Complete digital solution)\n⭐ Professional Package - $599/month (Advanced features)\n📦 Starter Package - $299/month (Essential services)\n\nWould you like to discuss which package fits your needs?',
+            portfolio: 'Check out our Portfolio page to see our latest projects! We\'ve worked with clients across various industries including e-commerce, hospitality, and professional services.\n\nVisit: jaffstudio.com/portfolio.html',
+            booking: 'Great! I can help you schedule a consultation. Visit our booking page to choose a convenient time:\n\njaffstudio.com/booking.html\n\nOr would you like me to collect your details and have our team reach out to you?',
+            contact: 'Contact Information:\n\n📧 Email: contact@jaffstudio.com\n📱 Phone: +41 (0) 44 123 4567\n📍 Address: Bahnhofstrasse 123, 8001 Zürich, Switzerland\n\nFeel free to reach out anytime!'
+        };
+
         // Add user message
-        const optionText = getTranslation(`chatbot.options.${action}`, this.currentLang);
-        this.addMessage(optionText, 'user');
+        const optionTexts = {
+            services: 'Our Services',
+            pricing: 'Pricing',
+            portfolio: 'Portfolio',
+            booking: 'Book a Consultation',
+            contact: 'Contact Us'
+        };
+        this.addMessage(optionTexts[action], 'user');
 
         // Show typing and response
         this.showTyping();
         setTimeout(() => {
             this.hideTyping();
-            const response = getTranslation(`chatbot.responses.${action}`, this.currentLang);
-            this.addMessage(response, 'bot');
+            this.addMessage(responses[action], 'bot');
 
             // Ask for email after showing service info
             if (!this.userEmail && !this.askedForEmail) {
@@ -141,7 +123,7 @@ class AIAssistant {
                     this.showTyping();
                     setTimeout(() => {
                         this.hideTyping();
-                        this.addMessage(getTranslation('chatbot.emailCapture', this.currentLang), 'bot');
+                        this.addMessage('I\'d love to send you more information! May I have your email address?', 'bot');
                         this.showEmailForm();
                     }, 1000);
                 }, 2000);
@@ -162,8 +144,8 @@ class AIAssistant {
 
         const formHTML = `
             <div style="display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.5rem;">
-                <input type="email" id="chatEmailInput" placeholder="${getTranslation('chatbot.emailPlaceholder', this.currentLang)}" style="padding: 0.8rem; border-radius: 8px; border: 1px solid var(--border-color); background: rgba(255, 255, 255, 0.05); color: var(--white); font-family: inherit;">
-                <button id="chatEmailSubmit" class="btn btn-primary" style="width: 100%; padding: 0.8rem;">${getTranslation('chatbot.emailSubmit', this.currentLang)}</button>
+                <input type="email" id="chatEmailInput" placeholder="your.email@example.com" style="padding: 0.8rem; border-radius: 8px; border: 1px solid var(--border-color); background: rgba(255, 255, 255, 0.05); color: var(--white); font-family: inherit;">
+                <button id="chatEmailSubmit" class="btn btn-primary" style="width: 100%; padding: 0.8rem;">Submit Email</button>
             </div>
         `;
 
@@ -186,7 +168,7 @@ class AIAssistant {
                 this.showTyping();
                 setTimeout(() => {
                     this.hideTyping();
-                    this.addMessage(getTranslation('chatbot.emailSuccess', this.currentLang), 'bot');
+                    this.addMessage('Thank you! We\'ve received your email and will be in touch soon. Is there anything else I can help you with?', 'bot');
                 }, 1000);
             } else {
                 emailInput.style.borderColor = '#f44336';
@@ -221,7 +203,7 @@ class AIAssistant {
             this.showTyping();
             setTimeout(() => {
                 this.hideTyping();
-                this.addMessage(getTranslation('chatbot.emailSuccess', this.currentLang), 'bot');
+                this.addMessage('Thank you! We\'ve received your email and will be in touch soon. Is there anything else I can help you with?', 'bot');
             }, 1000);
             return;
         }
@@ -242,7 +224,7 @@ class AIAssistant {
                     this.showTyping();
                     setTimeout(() => {
                         this.hideTyping();
-                        this.addMessage(getTranslation('chatbot.emailCapture', this.currentLang), 'bot');
+                        this.addMessage('I\'d love to send you more information! May I have your email address?', 'bot');
                         this.showEmailForm();
                     }, 1000);
                 }, 2000);
@@ -305,56 +287,47 @@ class AIAssistant {
         this.chatMessages.scrollTop = this.chatMessages.scrollHeight;
     }
 
-    // AI Response Logic (with multi-language support)
+    // AI Response Logic
     getAIResponse(message) {
         const lowerMessage = message.toLowerCase();
 
-        // Check for keywords in multiple languages
-        const serviceKeywords = ['service', 'dienstleistung', 'prestation'];
-        const webKeywords = ['web', 'website', 'site'];
-        const aiKeywords = ['ai', 'artificial intelligence', 'künstliche intelligenz', 'intelligence artificielle'];
-        const priceKeywords = ['price', 'cost', 'preis', 'kosten', 'prix', 'coût'];
-        const contactKeywords = ['contact', 'kontakt', 'phone', 'telefon', 'téléphone'];
-        const greetings = ['hello', 'hi', 'hey', 'hallo', 'bonjour', 'salut'];
-
         // Services
-        if (serviceKeywords.some(keyword => lowerMessage.includes(keyword))) {
-            return getTranslation('chatbot.responses.services', this.currentLang);
+        if (lowerMessage.includes('service') || lowerMessage.includes('what do you do') || lowerMessage.includes('what can you')) {
+            return 'We offer comprehensive digital solutions:\n\n🌐 Web Development - Custom websites & applications\n🤖 AI Solutions - Chatbots & automation\n💳 POS Systems - Modern point-of-sale\n📱 Social Media - Complete management\n\nWhich service interests you most?';
         }
 
         // Pricing
-        if (priceKeywords.some(keyword => lowerMessage.includes(keyword))) {
-            return getTranslation('chatbot.responses.pricing', this.currentLang);
+        if (lowerMessage.includes('price') || lowerMessage.includes('cost') || lowerMessage.includes('how much')) {
+            return 'Our packages start at $299/month for essentials, $599/month for professional features, and $999/month for our premium complete solution. Each can be customized to your needs. Would you like detailed pricing information?';
         }
 
         // Contact
-        if (contactKeywords.some(keyword => lowerMessage.includes(keyword))) {
-            return getTranslation('chatbot.responses.contact', this.currentLang);
+        if (lowerMessage.includes('contact') || lowerMessage.includes('phone') || lowerMessage.includes('email') || lowerMessage.includes('reach')) {
+            return 'You can reach us at:\n\n📧 contact@jaffstudio.com\n📱 +41 (0) 44 123 4567\n📍 Bahnhofstrasse 123, 8001 Zürich, Switzerland\n\nOr visit our contact page for a form!';
         }
 
         // Portfolio
-        if (lowerMessage.includes('portfolio') || lowerMessage.includes('project') || lowerMessage.includes('example') || lowerMessage.includes('beispiel') || lowerMessage.includes('exemple')) {
-            return getTranslation('chatbot.responses.portfolio', this.currentLang);
+        if (lowerMessage.includes('portfolio') || lowerMessage.includes('project') || lowerMessage.includes('example') || lowerMessage.includes('work')) {
+            return 'We\'ve completed amazing projects across various industries! Check out our portfolio at jaffstudio.com/portfolio.html to see our latest work. Would you like me to tell you about a specific project type?';
         }
 
         // Booking
-        if (lowerMessage.includes('book') || lowerMessage.includes('appointment') || lowerMessage.includes('termin') || lowerMessage.includes('rendez-vous')) {
-            return getTranslation('chatbot.responses.booking', this.currentLang);
+        if (lowerMessage.includes('book') || lowerMessage.includes('appointment') || lowerMessage.includes('schedule') || lowerMessage.includes('meet')) {
+            return 'I\'d be happy to help you schedule a consultation! Visit jaffstudio.com/booking.html to choose a convenient time, or I can collect your information and have our team reach out. What works best for you?';
         }
 
         // Greetings
-        if (greetings.some(greeting => lowerMessage.includes(greeting))) {
-            return getTranslation('chatbot.greeting', this.currentLang);
+        if (lowerMessage.includes('hello') || lowerMessage.includes('hi') || lowerMessage.includes('hey')) {
+            return 'Hello! 👋 Great to hear from you! I\'m here to help with any questions about Jaff Studio\'s services. What would you like to know?';
         }
 
-        // Default response based on language
-        const defaultResponses = {
-            en: 'That\'s a great question! I\'d love to give you detailed information. You can also contact our team directly at contact@jaffstudio.com or fill out our contact form for personalized assistance!',
-            fr: 'C\'est une excellente question ! J\'aimerais vous donner des informations détaillées. Vous pouvez également contacter notre équipe directement à contact@jaffstudio.com ou remplir notre formulaire de contact pour une assistance personnalisée !',
-            de: 'Das ist eine großartige Frage! Ich würde Ihnen gerne detaillierte Informationen geben. Sie können unser Team auch direkt unter contact@jaffstudio.com kontaktieren oder unser Kontaktformular ausfüllen, um persönliche Unterstützung zu erhalten!'
-        };
+        // Thank you
+        if (lowerMessage.includes('thank') || lowerMessage.includes('thanks')) {
+            return 'You\'re very welcome! 😊 Is there anything else I can help you with today?';
+        }
 
-        return defaultResponses[this.currentLang] || defaultResponses.en;
+        // Default response
+        return 'That\'s a great question! I\'d love to give you detailed information. You can also contact our team directly at contact@jaffstudio.com or fill out our contact form for personalized assistance!';
     }
 }
 

@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="theme-color" content="#0a0a0a">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Professional social media management from Jaff Studio. Build your brand, engage your audience, and drive real results across all social platforms.">
+    <meta name="keywords" content="social media management, content creation, community management, social advertising, Instagram, Facebook, LinkedIn">
+    <meta name="author" content="Jaff Studio">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Social Media Management - Jaff Studio">
+    <meta property="og:description" content="Build your brand and engage your audience across all social platforms.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jaffstudio.com/social-media.html">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Social Media Management - Jaff Studio">
+    <meta name="twitter:description" content="Build your brand and engage your audience across all social platforms.">
+
+    <title>Social Media Management - Jaff Studio</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Three.js for 3D Background -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- 3D Canvas Background -->
+    <canvas id="canvas-3d"></canvas>
+
+    <!-- Gradient Overlay -->
+    <div class="gradient-overlay"></div>
+
+    <!-- Floating Orbs -->
+    <div class="floating-orb orb-1"></div>
+    <div class="floating-orb orb-2"></div>
+    <div class="floating-orb orb-3"></div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">JAFF STUDIO</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="booking.html">Book Now</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            </div>
+            <button class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Content Wrapper -->
+    <div class="content-wrapper">
+        <!-- Hero Section -->
+        <section class="hero-section" style="padding: 180px 0 100px; text-align: center;">
+            <div class="container">
+                <div style="margin-bottom: 2rem;">
+                    <span style="font-size: 3rem;">📱</span>
+                    <h4 style="color: var(--primary); font-size: 1.2rem; font-weight: 600; margin: 1rem 0; letter-spacing: 2px;">SOCIAL MEDIA MANAGEMENT</h4>
+                </div>
+                <h1 style="font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 800; margin-bottom: 1.5rem; line-height: 1.2;">
+                    Turn Followers Into Customers
+                </h1>
+                <p style="font-size: 1.3rem; color: var(--text-secondary); max-width: 800px; margin: 0 auto 3rem; line-height: 1.6;">
+                    Build a powerful social media presence that engages your audience, grows your brand, and drives real revenue—while you focus on running your business.
+                </p>
+                <a href="booking.html" class="btn btn-primary" style="font-size: 1.2rem; padding: 1.2rem 3rem;">
+                    Get Your Social Media Strategy
+                </a>
+            </div>
+        </section>
+
+        <!-- Problem Section -->
+        <section style="padding: 100px 0; background: linear-gradient(135deg, rgba(139, 92, 246, 0.05), rgba(59, 130, 246, 0.05));">
+            <div class="container">
+                <div style="text-align: center; margin-bottom: 4rem;">
+                    <h2 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem;">Stop Wasting Money on Social Media That Doesn't Convert</h2>
+                    <p style="font-size: 1.2rem; color: var(--text-secondary);">Posting without strategy is throwing money away</p>
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 3rem; max-width: 1200px; margin: 0 auto;">
+                    <!-- DIY Social Media -->
+                    <div style="background: rgba(239, 68, 68, 0.1); border: 2px solid rgba(239, 68, 68, 0.3); border-radius: 20px; padding: 3rem;">
+                        <div style="text-align: center; margin-bottom: 2rem;">
+                            <i class="fas fa-times-circle" style="font-size: 3rem; color: #ef4444;"></i>
+                            <h3 style="font-size: 1.8rem; font-weight: 700; margin-top: 1rem; color: #ef4444;">DIY Social Media Problems</h3>
+                        </div>
+                        <ul style="list-style: none; padding: 0; margin: 0;">
+                            <li style="padding: 1rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: flex-start;">
+                                <i class="fas fa-exclamation-triangle" style="color: #ef4444; margin-right: 1rem; margin-top: 0.2rem;"></i>
+                                <span>Slow loading times driving visitors away</span>
+                            </li>
+                            <li style="padding: 1rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: flex-start;">
+                                <i class="fas fa-exclamation-triangle" style="color: #ef4444; margin-right: 1rem; margin-top: 0.2rem;"></i>
+                                <span>Not mobile-friendly, losing 60% of traffic</span>
+                            </li>
+                            <li style="padding: 1rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: flex-start;">
+                                <i class="fas fa-exclamation-triangle" style="color: #ef4444; margin-right: 1rem; margin-top: 0.2rem;"></i>
+                                <span>Poor SEO ranking invisible on Google</span>
+                            </li>
+                            <li style="padding: 1rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: flex-start;">
+                                <i class="fas fa-exclamation-triangle" style="color: #ef4444; margin-right: 1rem; margin-top: 0.2rem;"></i>
+                                <span>Confusing navigation frustrating users</span>
+                            </li>
+                            <li style="padding: 1rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: flex-start;">
+                                <i class="fas fa-exclamation-triangle" style="color: #ef4444; margin-right: 1rem; margin-top: 0.2rem;"></i>
+                                <span>Unprofessional design hurting credibility</span>
+                            </li>
+                            <li style="padding: 1rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: flex-start;">
+                                <i class="fas fa-exclamation-triangle" style="color: #ef4444; margin-right: 1rem; margin-top: 0.2rem;"></i>
+                                <span>No clear call-to-action losing conversions</span>
+                            </li>
+                            <li style="padding: 1rem 0; display: flex; align-items: flex-start;">
+                                <i class="fas fa-exclamation-triangle" style="color: #ef4444; margin-right: 1rem; margin-top: 0.2rem;"></i>
+                                <span>Difficult to update costing time and money</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- JAFF STUDIO Social Media -->
+                    <div style="background: rgba(34, 197, 94, 0.1); border: 2px solid rgba(34, 197, 94, 0.3); border-radius: 20px; padding: 3rem;">
+                        <div style="text-align: center; margin-bottom: 2rem;">
+                            <i class="fas fa-check-circle" style="font-size: 3rem; color: #22c55e;"></i>
+                            <h3 style="font-size: 1.8rem; font-weight: 700; margin-top: 1rem; color: #22c55e;">JAFF STUDIO Social Media</h3>
+                        </div>
+                        <ul style="list-style: none; padding: 0; margin: 0;">
+                            <li style="padding: 1rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: flex-start;">
+                                <i class="fas fa-check" style="color: #22c55e; margin-right: 1rem; margin-top: 0.2rem;"></i>
+                                <span>Lightning-fast loading under 2 seconds</span>
+                            </li>
+                            <li style="padding: 1rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: flex-start;">
+                                <i class="fas fa-check" style="color: #22c55e; margin-right: 1rem; margin-top: 0.2rem;"></i>
+                                <span>100% responsive on all devices</span>
+                            </li>
+                            <li style="padding: 1rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: flex-start;">
+                                <i class="fas fa-check" style="color: #22c55e; margin-right: 1rem; margin-top: 0.2rem;"></i>
+                                <span>SEO-optimized to rank on page 1 of Google</span>
+                            </li>
+                            <li style="padding: 1rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: flex-start;">
+                                <i class="fas fa-check" style="color: #22c55e; margin-right: 1rem; margin-top: 0.2rem;"></i>
+                                <span>Intuitive navigation for perfect user experience</span>
+                            </li>
+                            <li style="padding: 1rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: flex-start;">
+                                <i class="fas fa-check" style="color: #22c55e; margin-right: 1rem; margin-top: 0.2rem;"></i>
+                                <span>Modern, stunning design that builds trust</span>
+                            </li>
+                            <li style="padding: 1rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: flex-start;">
+                                <i class="fas fa-check" style="color: #22c55e; margin-right: 1rem; margin-top: 0.2rem;"></i>
+                                <span>Strategic CTAs that convert visitors to customers</span>
+                            </li>
+                            <li style="padding: 1rem 0; display: flex; align-items: flex-start;">
+                                <i class="fas fa-check" style="color: #22c55e; margin-right: 1rem; margin-top: 0.2rem;"></i>
+                                <span>Easy to manage and update yourself</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Web Development Services -->
+        <section style="padding: 100px 0;">
+            <div class="container">
+                <div style="text-align: center; margin-bottom: 4rem;">
+                    <h2 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem;">Our Web Development Services</h2>
+                    <p style="font-size: 1.2rem; color: var(--text-secondary);">Complete solutions for every business need</p>
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2.5rem;">
+                    <!-- Custom Website Design -->
+                    <div class="service-card" style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border-color); border-radius: 20px; padding: 2.5rem; transition: all 0.3s;">
+                        <div style="font-size: 3rem; margin-bottom: 1.5rem;">🎨</div>
+                        <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem;">Custom Website Design</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 1.6;">
+                            <strong>What you get:</strong> Unique, brand-aligned website design that stands out from competitors and converts visitors into customers.
+                        </p>
+                        <p style="color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 1.6;">
+                            <strong>Best for:</strong> Businesses wanting to establish strong brand identity and credibility online
+                        </p>
+                        <div style="background: rgba(139, 92, 246, 0.1); border-left: 3px solid var(--primary); padding: 1rem; border-radius: 8px;">
+                            <p style="font-size: 0.95rem; margin: 0;">
+                                <strong>Includes:</strong> Custom graphics, responsive design, brand integration, SEO foundation
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- E-commerce Solutions -->
+                    <div class="service-card" style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border-color); border-radius: 20px; padding: 2.5rem; transition: all 0.3s;">
+                        <div style="font-size: 3rem; margin-bottom: 1.5rem;">🛒</div>
+                        <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem;">E-commerce Solutions</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 1.6;">
+                            <strong>What you get:</strong> Full-featured online store with secure payments, inventory management, and order tracking.
+                        </p>
+                        <p style="color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 1.6;">
+                            <strong>Best for:</strong> Retail businesses, product sellers, B2C companies
+                        </p>
+                        <div style="background: rgba(139, 92, 246, 0.1); border-left: 3px solid var(--primary); padding: 1rem; border-radius: 8px;">
+                            <p style="font-size: 0.95rem; margin: 0;">
+                                <strong>Includes:</strong> Shopping cart, payment gateway, product catalog, shipping integration
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Progressive Web Apps -->
+                    <div class="service-card" style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border-color); border-radius: 20px; padding: 2.5rem; transition: all 0.3s;">
+                        <div style="font-size: 3rem; margin-bottom: 1.5rem;">📱</div>
+                        <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem;">Progressive Web Apps</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 1.6;">
+                            <strong>What you get:</strong> App-like experience that works offline, loads instantly, and can be installed on any device.
+                        </p>
+                        <p style="color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 1.6;">
+                            <strong>Best for:</strong> Service businesses, SaaS companies, mobile-first audiences
+                        </p>
+                        <div style="background: rgba(139, 92, 246, 0.1); border-left: 3px solid var(--primary); padding: 1rem; border-radius: 8px;">
+                            <p style="font-size: 0.95rem; margin: 0;">
+                                <strong>Includes:</strong> Offline mode, push notifications, home screen install, lightning speed
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Web Application Development -->
+                    <div class="service-card" style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border-color); border-radius: 20px; padding: 2.5rem; transition: all 0.3s;">
+                        <div style="font-size: 3rem; margin-bottom: 1.5rem;">⚡</div>
+                        <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem;">Web Applications</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 1.6;">
+                            <strong>What you get:</strong> Custom web applications built with React, Vue, or Angular for complex business needs.
+                        </p>
+                        <p style="color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 1.6;">
+                            <strong>Best for:</strong> Enterprise solutions, custom portals, internal tools, SaaS platforms
+                        </p>
+                        <div style="background: rgba(139, 92, 246, 0.1); border-left: 3px solid var(--primary); padding: 1rem; border-radius: 8px;">
+                            <p style="font-size: 0.95rem; margin: 0;">
+                                <strong>Includes:</strong> Modern frameworks, API development, database design, cloud hosting
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section style="padding: 100px 0; background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(59, 130, 246, 0.1));">
+            <div class="container">
+                <div style="text-align: center; margin-bottom: 4rem;">
+                    <h2 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem;">Results That Speak For Themselves</h2>
+                    <p style="font-size: 1.2rem; color: var(--text-secondary);">Real metrics from our client websites</p>
+                </div>
+
+                <div class="stats-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 3rem;">
+                    <div class="stat-item" style="text-align: center;">
+                        <h3 style="font-size: 3.5rem; font-weight: 800; color: var(--primary); margin-bottom: 0.5rem;">250%</h3>
+                        <p style="font-size: 1.1rem; color: var(--text-secondary);">Average Increase in Traffic</p>
+                    </div>
+                    <div class="stat-item" style="text-align: center;">
+                        <h3 style="font-size: 3.5rem; font-weight: 800; color: var(--primary); margin-bottom: 0.5rem;">68%</h3>
+                        <p style="font-size: 1.1rem; color: var(--text-secondary);">Higher Conversion Rates</p>
+                    </div>
+                    <div class="stat-item" style="text-align: center;">
+                        <h3 style="font-size: 3.5rem; font-weight: 800; color: var(--primary); margin-bottom: 0.5rem;">1.8s</h3>
+                        <p style="font-size: 1.1rem; color: var(--text-secondary);">Average Load Time</p>
+                    </div>
+                    <div class="stat-item" style="text-align: center;">
+                        <h3 style="font-size: 3.5rem; font-weight: 800; color: var(--primary); margin-bottom: 0.5rem;">100%</h3>
+                        <p style="font-size: 1.1rem; color: var(--text-secondary);">Mobile Responsive</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section style="padding: 100px 0;">
+            <div class="container">
+                <div style="text-align: center; margin-bottom: 4rem;">
+                    <h2 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem;">Web Development Pricing</h2>
+                    <p style="font-size: 1.2rem; color: var(--text-secondary);">Transparent pricing, no hidden fees</p>
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2.5rem; max-width: 1200px; margin: 0 auto;">
+                    <!-- Landing Page -->
+                    <div class="pricing-card" style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border-color); border-radius: 20px; padding: 2.5rem; text-align: center; transition: all 0.3s;">
+                        <h3 style="font-size: 1.8rem; font-weight: 700; margin-bottom: 1rem;">Landing Page</h3>
+                        <div style="margin: 2rem 0;">
+                            <span style="font-size: 3.5rem; font-weight: 800; color: var(--primary);">$1,497</span>
+                        </div>
+                        <ul style="list-style: none; padding: 0; margin: 2rem 0; text-align: left;">
+                            <li style="padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center;">
+                                <i class="fas fa-check" style="color: var(--primary); margin-right: 0.75rem;"></i>
+                                <span>Single high-converting page</span>
+                            </li>
+                            <li style="padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center;">
+                                <i class="fas fa-check" style="color: var(--primary); margin-right: 0.75rem;"></i>
+                                <span>Mobile responsive design</span>
+                            </li>
+                            <li style="padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center;">
+                                <i class="fas fa-check" style="color: var(--primary); margin-right: 0.75rem;"></i>
+                                <span>Contact form integration</span>
+                            </li>
+                            <li style="padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center;">
+                                <i class="fas fa-check" style="color: var(--primary); margin-right: 0.75rem;"></i>
+                                <span>Basic SEO optimization</span>
+                            </li>
+                            <li style="padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center;">
+                                <i class="fas fa-check" style="color: var(--primary); margin-right: 0.75rem;"></i>
+                                <span>2 weeks delivery</span>
+                            </li>
+                            <li style="padding: 0.75rem 0; display: flex; align-items: center;">
+                                <i class="fas fa-check" style="color: var(--primary); margin-right: 0.75rem;"></i>
+                                <span>1 month support</span>
+                            </li>
+                        </ul>
+                        <a href="booking.html" class="btn btn-primary" style="width: 100%; justify-content: center;">Get Started</a>
+                    </div>
+
+                    <!-- Business Website -->
+                    <div class="pricing-card" style="background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(59, 130, 246, 0.1)); border: 2px solid var(--primary); border-radius: 20px; padding: 2.5rem; text-align: center; position: relative; transform: scale(1.05); transition: all 0.3s;">
+                        <div style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: var(--primary); color: var(--white); padding: 0.5rem 1.5rem; border-radius: 20px; font-weight: 600; font-size: 0.9rem;">MOST POPULAR</div>
+                        <h3 style="font-size: 1.8rem; font-weight: 700; margin-bottom: 1rem;">Business Website</h3>
+                        <div style="margin: 2rem 0;">
+                            <span style="font-size: 3.5rem; font-weight: 800; color: var(--primary);">$4,997</span>
+                        </div>
+                        <ul style="list-style: none; padding: 0; margin: 2rem 0; text-align: left;">
+                            <li style="padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center;">
+                                <i class="fas fa-check" style="color: var(--primary); margin-right: 0.75rem;"></i>
+                                <span><strong>Up to 10 custom pages</strong></span>
+                            </li>
+                            <li style="padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center;">
+                                <i class="fas fa-check" style="color: var(--primary); margin-right: 0.75rem;"></i>
+                                <span>Fully responsive design</span>
+                            </li>
+                            <li style="padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center;">
+                                <i class="fas fa-check" style="color: var(--primary); margin-right: 0.75rem;"></i>
+                                <span>CMS integration (WordPress/custom)</span>
+                            </li>
+                            <li style="padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center;">
+                                <i class="fas fa-check" style="color: var(--primary); margin-right: 0.75rem;"></i>
+                                <span>Advanced SEO optimization</span>
+                            </li>
+                            <li style="padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center;">
+                                <i class="fas fa-check" style="color: var(--primary); margin-right: 0.75rem;"></i>
+                                <span>Contact forms & integrations</span>
+                            </li>
+                            <li style="padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center;">
+                                <i class="fas fa-check" style="color: var(--primary); margin-right: 0.75rem;"></i>
+                                <span>4-6 weeks delivery</span>
+                            </li>
+                            <li style="padding: 0.75rem 0; display: flex; align-items: center;">
+                                <i class="fas fa-check" style="color: var(--primary); margin-right: 0.75rem;"></i>
+                                <span>3 months support</span>
+                            </li>
+                        </ul>
+                        <a href="booking.html" class="btn btn-primary" style="width: 100%; justify-content: center;">Start Your Project</a>
+                    </div>
+
+                    <!-- E-commerce/Enterprise -->
+                    <div class="pricing-card" style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border-color); border-radius: 20px; padding: 2.5rem; text-align: center; transition: all 0.3s;">
+                        <h3 style="font-size: 1.8rem; font-weight: 700; margin-bottom: 1rem;">E-commerce / Enterprise</h3>
+                        <div style="margin: 2rem 0;">
+                            <span style="font-size: 3.5rem; font-weight: 800; color: var(--primary);">Custom</span>
+                        </div>
+                        <ul style="list-style: none; padding: 0; margin: 2rem 0; text-align: left;">
+                            <li style="padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center;">
+                                <i class="fas fa-check" style="color: var(--primary); margin-right: 0.75rem;"></i>
+                                <span>Unlimited pages</span>
+                            </li>
+                            <li style="padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center;">
+                                <i class="fas fa-check" style="color: var(--primary); margin-right: 0.75rem;"></i>
+                                <span>E-commerce functionality</span>
+                            </li>
+                            <li style="padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center;">
+                                <i class="fas fa-check" style="color: var(--primary); margin-right: 0.75rem;"></i>
+                                <span>Custom web application</span>
+                            </li>
+                            <li style="padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center;">
+                                <i class="fas fa-check" style="color: var(--primary); margin-right: 0.75rem;"></i>
+                                <span>API & database development</span>
+                            </li>
+                            <li style="padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center;">
+                                <i class="fas fa-check" style="color: var(--primary); margin-right: 0.75rem;"></i>
+                                <span>Advanced features & integrations</span>
+                            </li>
+                            <li style="padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center;">
+                                <i class="fas fa-check" style="color: var(--primary); margin-right: 0.75rem;"></i>
+                                <span>Timeline based on scope</span>
+                            </li>
+                            <li style="padding: 0.75rem 0; display: flex; align-items: center;">
+                                <i class="fas fa-check" style="color: var(--primary); margin-right: 0.75rem;"></i>
+                                <span>6 months premium support</span>
+                            </li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-primary" style="width: 100%; justify-content: center;">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA Section -->
+        <section style="padding: 100px 0; background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(59, 130, 246, 0.1)); text-align: center;">
+            <div class="container" style="max-width: 800px;">
+                <h2 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 1.5rem;">Ready to Transform Your Online Presence?</h2>
+                <p style="font-size: 1.3rem; color: var(--text-secondary); margin-bottom: 3rem; line-height: 1.6;">
+                    Let's build a website that works as hard as you do. Get started with a free consultation today.
+                </p>
+                <a href="booking.html" class="btn btn-primary" style="font-size: 1.2rem; padding: 1.2rem 3rem;">
+                    Schedule Your Free Consultation
+                </a>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>JAFF STUDIO</h3>
+                    <p>Transforming businesses through innovative digital solutions.</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/jaff_studio1/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://x.com/jaff_studio" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61571490585804" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="booking.html">Book Now</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="web-development.html">Web Development</a></li>
+                        <li><a href="ai-solutions.html">AI Solutions</a></li>
+                        <li><a href="services.html">POS Systems</a></li>
+                        <li><a href="services.html">Social Media</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> contact@jaffstudio.com</li>
+                        <li><i class="fas fa-phone"></i> +41 (0) 44 123 4567</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Bahnhofstrasse 123, 8001 Zürich</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Jaff Studio. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress"></div>
+
+    <!-- AI Chatbot Widget -->
+    <div id="chat-widget" class="chat-widget">
+        <div class="chat-header">
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <div class="chat-avatar">🤖</div>
+                <div>
+                    <h3>AI Assistant</h3>
+                    <p><span class="chat-status"></span>Online</p>
+                </div>
+            </div>
+            <button id="chat-close">✕</button>
+        </div>
+        <div id="chat-messages" class="chat-messages"></div>
+        <div class="chat-input-container">
+            <input type="text" id="chat-input" placeholder="Type your message...">
+            <button id="chat-send"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <!-- Chat Toggle Button -->
+    <button id="chat-toggle" class="chat-toggle">
+        <i class="fas fa-comment"></i>
+        <span class="chat-badge">1</span>
+    </button>
+
+    <!-- Scripts -->
+    <script src="assets/js/3d-background.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/chatbot.js"></script>
+</body>
+</html>

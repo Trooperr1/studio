@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="theme-color" content="#0a0a0a">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Book a consultation with Jaff Studio. Schedule your appointment for web development, AI solutions, or digital transformation services.">
+    <meta name="keywords" content="book consultation, schedule appointment, Jaff Studio booking, meeting">
+    <meta name="author" content="Jaff Studio">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Book Consultation - Jaff Studio">
+    <meta property="og:description" content="Schedule your appointment with our expert team">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Book Consultation - Jaff Studio">
+
+    <title>Book Consultation - Jaff Studio</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Three.js for 3D Background -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- 3D Canvas Background -->
+    <canvas id="canvas-3d"></canvas>
+
+    <!-- Gradient Overlay -->
+    <div class="gradient-overlay"></div>
+
+    <!-- Floating Orbs -->
+    <div class="floating-orb orb-1"></div>
+    <div class="floating-orb orb-2"></div>
+    <div class="floating-orb orb-3"></div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">JAFF STUDIO</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="booking.html">Book Now</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Content Wrapper -->
+    <div class="content-wrapper">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Book Your Consultation</h1>
+                <p class="tagline">Schedule a Meeting with Our Experts</p>
+                <p class="description">
+                    Choose a convenient time and let's discuss how we can help transform your business with our premium digital solutions.
+                </p>
+            </div>
+        </section>
+
+        <!-- Booking Section -->
+        <section class="services">
+            <div class="container" style="max-width: 1000px;">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-bottom: 3rem;">
+                    <!-- Left Column - Calendar and Time -->
+                    <div>
+                        <h2 style="margin-bottom: 1.5rem; color: var(--white);">
+                            <i class="far fa-calendar-alt"></i> Select Date & Time
+                        </h2>
+
+                        <!-- Calendar -->
+                        <div id="calendar" style="background: rgba(255, 255, 255, 0.03); padding: 2rem; border-radius: 20px; border: 1px solid var(--border-color); margin-bottom: 2rem;">
+                            <div class="calendar-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+                                <button id="prevMonth" class="btn btn-secondary" style="padding: 0.5rem 1rem;">
+                                    <i class="fas fa-chevron-left"></i>
+                                </button>
+                                <h3 id="currentMonth" style="color: var(--white); margin: 0;"></h3>
+                                <button id="nextMonth" class="btn btn-secondary" style="padding: 0.5rem 1rem;">
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
+                            </div>
+                            <div class="calendar-grid" id="calendarGrid" style="display: grid; grid-template-columns: repeat(7, 1fr); gap: 0.5rem;">
+                                <!-- Calendar days will be generated by JavaScript -->
+                            </div>
+                        </div>
+
+                        <!-- Time Slots -->
+                        <div id="timeSlotContainer" style="display: none;">
+                            <h3 style="margin-bottom: 1.5rem; color: var(--white);">
+                                <i class="far fa-clock"></i> Available Time Slots
+                            </h3>
+                            <div id="timeSlots" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;">
+                                <!-- Time slots will be generated by JavaScript -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column - Booking Form -->
+                    <div>
+                        <h2 style="margin-bottom: 1.5rem; color: var(--white);">
+                            <i class="fas fa-user"></i> Your Information
+                        </h2>
+
+                        <form id="bookingForm" style="background: rgba(255, 255, 255, 0.03); padding: 2rem; border-radius: 20px; border: 1px solid var(--border-color);">
+                            <!-- Service Selection -->
+                            <div style="margin-bottom: 1.5rem;">
+                                <label for="service" style="display: block; margin-bottom: 0.5rem; color: var(--white); font-weight: 600;">
+                                    <i class="fas fa-briefcase"></i> Service *
+                                </label>
+                                <select id="service" required style="width: 100%; padding: 1rem; background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border-color); border-radius: 10px; color: var(--white); font-size: 1rem; font-family: inherit;">
+                                    <option value="">Select a service...</option>
+                                    <option value="web-development">Web Development</option>
+                                    <option value="ai-solutions">AI Solutions</option>
+                                    <option value="pos-systems">POS Systems</option>
+                                    <option value="social-media">Social Media Management</option>
+                                    <option value="seo">SEO & Digital Marketing</option>
+                                    <option value="consulting">Business Consulting</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+
+                            <!-- Meeting Type -->
+                            <div style="margin-bottom: 1.5rem;">
+                                <label for="meetingType" style="display: block; margin-bottom: 0.5rem; color: var(--white); font-weight: 600;">
+                                    <i class="fas fa-video"></i> Meeting Type *
+                                </label>
+                                <select id="meetingType" required style="width: 100%; padding: 1rem; background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border-color); border-radius: 10px; color: var(--white); font-size: 1rem; font-family: inherit;">
+                                    <option value="video">Video Call (Zoom/Google Meet)</option>
+                                    <option value="phone">Phone Call</option>
+                                    <option value="in-person">In-Person Meeting</option>
+                                </select>
+                            </div>
+
+                            <!-- Name -->
+                            <div style="margin-bottom: 1.5rem;">
+                                <label for="bookingName" style="display: block; margin-bottom: 0.5rem; color: var(--white); font-weight: 600;">
+                                    Full Name *
+                                </label>
+                                <input type="text" id="bookingName" required
+                                       style="width: 100%; padding: 1rem; background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border-color); border-radius: 10px; color: var(--white); font-size: 1rem; font-family: inherit;">
+                            </div>
+
+                            <!-- Email -->
+                            <div style="margin-bottom: 1.5rem;">
+                                <label for="bookingEmail" style="display: block; margin-bottom: 0.5rem; color: var(--white); font-weight: 600;">
+                                    Email Address *
+                                </label>
+                                <input type="email" id="bookingEmail" required
+                                       style="width: 100%; padding: 1rem; background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border-color); border-radius: 10px; color: var(--white); font-size: 1rem; font-family: inherit;">
+                            </div>
+
+                            <!-- Phone -->
+                            <div style="margin-bottom: 1.5rem;">
+                                <label for="bookingPhone" style="display: block; margin-bottom: 0.5rem; color: var(--white); font-weight: 600;">
+                                    Phone Number *
+                                </label>
+                                <input type="tel" id="bookingPhone" required
+                                       style="width: 100%; padding: 1rem; background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border-color); border-radius: 10px; color: var(--white); font-size: 1rem; font-family: inherit;">
+                            </div>
+
+                            <!-- Company (Optional) -->
+                            <div style="margin-bottom: 1.5rem;">
+                                <label for="bookingCompany" style="display: block; margin-bottom: 0.5rem; color: var(--white); font-weight: 600;">
+                                    Company Name (Optional)
+                                </label>
+                                <input type="text" id="bookingCompany"
+                                       style="width: 100%; padding: 1rem; background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border-color); border-radius: 10px; color: var(--white); font-size: 1rem; font-family: inherit;">
+                            </div>
+
+                            <!-- Message -->
+                            <div style="margin-bottom: 1.5rem;">
+                                <label for="bookingMessage" style="display: block; margin-bottom: 0.5rem; color: var(--white); font-weight: 600;">
+                                    Additional Notes (Optional)
+                                </label>
+                                <textarea id="bookingMessage" rows="4"
+                                          style="width: 100%; padding: 1rem; background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border-color); border-radius: 10px; color: var(--white); font-size: 1rem; font-family: inherit; resize: vertical;" placeholder="Tell us more about your project or requirements..."></textarea>
+                            </div>
+
+                            <!-- Selected Date & Time Display -->
+                            <div id="selectedDateTime" style="background: rgba(255, 255, 255, 0.08); padding: 1rem; border-radius: 10px; margin-bottom: 1.5rem; display: none;">
+                                <p style="color: var(--white); margin: 0;">
+                                    <strong><i class="fas fa-calendar-check"></i> Selected:</strong><br>
+                                    <span id="displayDateTime" style="color: var(--light-gray); font-size: 1.1rem;"></span>
+                                </p>
+                            </div>
+
+                            <!-- Hidden fields for date and time -->
+                            <input type="hidden" id="selectedDate">
+                            <input type="hidden" id="selectedTime">
+
+                            <!-- Submit Button -->
+                            <button type="submit" class="btn btn-primary" style="width: 100%;" id="submitBooking" disabled>
+                                <i class="fas fa-calendar-check"></i> Confirm Booking
+                            </button>
+
+                            <p style="text-align: center; margin-top: 1rem; color: var(--medium-gray); font-size: 0.9rem;">
+                                <i class="fas fa-info-circle"></i> You'll receive a confirmation email shortly after booking
+                            </p>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Benefits Section -->
+                <div style="margin-top: 4rem;">
+                    <h2 class="section-title">What to Expect</h2>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 3rem;">
+                        <div style="background: rgba(255, 255, 255, 0.03); padding: 2rem; border-radius: 15px; border: 1px solid var(--border-color); text-align: center;">
+                            <div style="font-size: 3rem; margin-bottom: 1rem;">📋</div>
+                            <h3 style="color: var(--white); margin-bottom: 1rem;">Free Consultation</h3>
+                            <p style="color: var(--light-gray);">
+                                Get expert advice tailored to your specific needs and business goals
+                            </p>
+                        </div>
+
+                        <div style="background: rgba(255, 255, 255, 0.03); padding: 2rem; border-radius: 15px; border: 1px solid var(--border-color); text-align: center;">
+                            <div style="font-size: 3rem; margin-bottom: 1rem;">💡</div>
+                            <h3 style="color: var(--white); margin-bottom: 1rem;">Custom Solutions</h3>
+                            <p style="color: var(--light-gray);">
+                                Receive personalized recommendations and strategies for your project
+                            </p>
+                        </div>
+
+                        <div style="background: rgba(255, 255, 255, 0.03); padding: 2rem; border-radius: 15px; border: 1px solid var(--border-color); text-align: center;">
+                            <div style="font-size: 3rem; margin-bottom: 1rem;">🚀</div>
+                            <h3 style="color: var(--white); margin-bottom: 1rem;">Fast Response</h3>
+                            <p style="color: var(--light-gray);">
+                                Our team responds quickly to help you move forward with confidence
+                            </p>
+                        </div>
+
+                        <div style="background: rgba(255, 255, 255, 0.03); padding: 2rem; border-radius: 15px; border: 1px solid var(--border-color); text-align: center;">
+                            <div style="font-size: 3rem; margin-bottom: 1rem;">✅</div>
+                            <h3 style="color: var(--white); margin-bottom: 1rem;">No Commitment</h3>
+                            <p style="color: var(--light-gray);">
+                                Explore options without obligation - we're here to help you decide
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="features">
+            <div class="container" style="max-width: 900px;">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+
+                <div style="margin-top: 3rem;">
+                    <div style="background: rgba(255, 255, 255, 0.03); padding: 2rem; border-radius: 15px; border: 1px solid var(--border-color); margin-bottom: 1.5rem;">
+                        <h3 style="color: var(--white); margin-bottom: 1rem;">
+                            <i class="fas fa-question-circle"></i> How long is the consultation?
+                        </h3>
+                        <p style="color: var(--light-gray); line-height: 1.8;">
+                            Our standard consultation is 30-45 minutes, giving us enough time to understand your needs and provide valuable insights.
+                        </p>
+                    </div>
+
+                    <div style="background: rgba(255, 255, 255, 0.03); padding: 2rem; border-radius: 15px; border: 1px solid var(--border-color); margin-bottom: 1.5rem;">
+                        <h3 style="color: var(--white); margin-bottom: 1rem;">
+                            <i class="fas fa-question-circle"></i> Is the consultation really free?
+                        </h3>
+                        <p style="color: var(--light-gray); line-height: 1.8;">
+                            Yes! We offer free initial consultations to discuss your project and provide recommendations with no obligation.
+                        </p>
+                    </div>
+
+                    <div style="background: rgba(255, 255, 255, 0.03); padding: 2rem; border-radius: 15px; border: 1px solid var(--border-color); margin-bottom: 1.5rem;">
+                        <h3 style="color: var(--white); margin-bottom: 1rem;">
+                            <i class="fas fa-question-circle"></i> Can I reschedule my appointment?
+                        </h3>
+                        <p style="color: var(--light-gray); line-height: 1.8;">
+                            Absolutely! Just contact us at contact@jaffstudio.com or call us, and we'll be happy to reschedule to a more convenient time.
+                        </p>
+                    </div>
+
+                    <div style="background: rgba(255, 255, 255, 0.03); padding: 2rem; border-radius: 15px; border: 1px solid var(--border-color);">
+                        <h3 style="color: var(--white); margin-bottom: 1rem;">
+                            <i class="fas fa-question-circle"></i> What should I prepare before the meeting?
+                        </h3>
+                        <p style="color: var(--light-gray); line-height: 1.8;">
+                            Think about your goals, budget, and timeline. If you have any reference materials, examples, or specific requirements, feel free to share them during our call.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>JAFF STUDIO</h3>
+                <p>Premium digital solutions for modern businesses. We transform ideas into reality with cutting-edge technology and creative excellence.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/profile.php?id=61583054440347" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="https://x.com/jaffstudio?s=11" target="_blank" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+                    <a href="https://www.instagram.com/jaffstudio?igsh=bDVpazlrZnZnMWx5" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="booking.html">Book Now</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul class="footer-links">
+                    <li><a href="services.html#web">Web Development</a></li>
+                    <li><a href="services.html#ai">AI Solutions</a></li>
+                    <li><a href="services.html#pos">POS Systems</a></li>
+                    <li><a href="services.html#social">Social Media</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <ul class="footer-links">
+                    <li>Email: contact@jaffstudio.com</li>
+                    <li>Phone: +41 (0) 44 123 4567</li>
+                    <li>Address: Bahnhofstrasse 123, 8001 Zürich, Switzerland</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 Jaff Studio. All rights reserved. | <a href="privacy.html" style="color: var(--white); text-decoration: underline;">Privacy Policy</a> | <a href="terms.html" style="color: var(--white); text-decoration: underline;">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <!-- AI Chatbot Toggle Button -->
+    <div id="chat-toggle">🤖</div>
+
+    <!-- AI Chatbot Widget -->
+    <div id="chat-widget">
+        <div class="chat-header">
+            <div class="chat-header-info">
+                <div class="chat-avatar">🤖</div>
+                <div class="chat-header-text">
+                    <h3>AI Assistant</h3>
+                    <p><span class="chat-status"></span>Online</p>
+                </div>
+            </div>
+            <button id="chat-close">✕</button>
+        </div>
+        <div id="chat-messages"></div>
+        <div class="chat-input-container">
+            <input type="text" id="chat-input" placeholder="Type your message...">
+            <button id="chat-send">➤</button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/3d-background.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/chatbot.js"></script>
+    <script src="assets/js/booking.js"></script>
+</body>
+</html>

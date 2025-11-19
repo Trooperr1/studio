@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="theme-color" content="#0a0a0a">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Explore Jaff Studio's premium services: Web Development, AI Solutions, POS Systems, and Social Media Management. Transform your business today.">
+    <meta name="keywords" content="web development services, AI solutions, POS systems, social media management, digital services">
+    <meta name="author" content="Jaff Studio">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Services - Jaff Studio">
+    <meta property="og:description" content="Premium Web Development, AI Solutions, POS Systems & Social Media Management Services">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Services - Jaff Studio">
+
+    <title>Services - Jaff Studio</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Three.js for 3D Background -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- 3D Canvas Background -->
+    <canvas id="canvas-3d"></canvas>
+
+    <!-- Gradient Overlay -->
+    <div class="gradient-overlay"></div>
+
+    <!-- Floating Orbs -->
+    <div class="floating-orb orb-1"></div>
+    <div class="floating-orb orb-2"></div>
+    <div class="floating-orb orb-3"></div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">JAFF STUDIO</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Content Wrapper -->
+    <div class="content-wrapper">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Our Services</h1>
+                <p class="tagline">Comprehensive Digital Solutions</p>
+                <p class="description">
+                    We offer a full suite of premium services designed to elevate your business
+                    and drive measurable results.
+                </p>
+            </div>
+        </section>
+
+        <!-- Web Development Section -->
+        <section class="services" id="web">
+            <div class="container">
+                <h2 class="section-title">Web Development</h2>
+                <p class="section-subtitle">Build powerful, scalable web solutions</p>
+
+                <div class="services-grid">
+                    <div class="service-card">
+                        <span class="service-icon">🌐</span>
+                        <h3>Custom Website Design</h3>
+                        <p>Unique, tailored websites that reflect your brand identity and engage your audience.</p>
+                        <ul>
+                            <li>Responsive Design</li>
+                            <li>User Experience Optimization</li>
+                            <li>Brand Consistency</li>
+                            <li>SEO Optimized</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card">
+                        <span class="service-icon">🛍️</span>
+                        <h3>E-commerce Solutions</h3>
+                        <p>Complete online store solutions with secure payment processing and inventory management.</p>
+                        <ul>
+                            <li>Shopping Cart Integration</li>
+                            <li>Payment Gateway Setup</li>
+                            <li>Product Management</li>
+                            <li>Order Tracking</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card">
+                        <span class="service-icon">📱</span>
+                        <h3>Progressive Web Apps</h3>
+                        <p>App-like experiences that work seamlessly across all devices and platforms.</p>
+                        <ul>
+                            <li>Offline Functionality</li>
+                            <li>Push Notifications</li>
+                            <li>Fast Loading</li>
+                            <li>Cross-Platform</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card">
+                        <span class="service-icon">⚙️</span>
+                        <h3>Web Application Development</h3>
+                        <p>Complex web applications built with modern frameworks and best practices.</p>
+                        <ul>
+                            <li>React / Vue / Angular</li>
+                            <li>Node.js Backend</li>
+                            <li>Database Design</li>
+                            <li>API Development</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI Solutions Section -->
+        <section class="features" id="ai">
+            <div class="container">
+                <h2 class="section-title">AI Solutions</h2>
+                <p class="section-subtitle">Intelligent automation for your business</p>
+
+                <div class="services-grid">
+                    <div class="service-card">
+                        <span class="service-icon">🧠</span>
+                        <h3>Machine Learning</h3>
+                        <p>Custom ML models tailored to solve your specific business challenges.</p>
+                        <ul>
+                            <li>Predictive Analytics</li>
+                            <li>Data Mining</li>
+                            <li>Pattern Recognition</li>
+                            <li>Custom Model Training</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card">
+                        <span class="service-icon">💬</span>
+                        <h3>Natural Language Processing</h3>
+                        <p>AI-powered text analysis and understanding for better customer insights.</p>
+                        <ul>
+                            <li>Chatbots & Virtual Assistants</li>
+                            <li>Sentiment Analysis</li>
+                            <li>Text Classification</li>
+                            <li>Language Translation</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card">
+                        <span class="service-icon">👁️</span>
+                        <h3>Computer Vision</h3>
+                        <p>Image and video analysis solutions for various applications.</p>
+                        <ul>
+                            <li>Object Detection</li>
+                            <li>Facial Recognition</li>
+                            <li>Image Classification</li>
+                            <li>Quality Control</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card">
+                        <span class="service-icon">🔗</span>
+                        <h3>AI Integration</h3>
+                        <p>Seamlessly integrate AI capabilities into your existing systems.</p>
+                        <ul>
+                            <li>API Integration</li>
+                            <li>Workflow Automation</li>
+                            <li>System Optimization</li>
+                            <li>Custom Solutions</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- POS Systems Section -->
+        <section class="services" id="pos">
+            <div class="container">
+                <h2 class="section-title">POS Systems</h2>
+                <p class="section-subtitle">Modern point-of-sale solutions for retail success</p>
+
+                <div class="services-grid">
+                    <div class="service-card">
+                        <span class="service-icon">☁️</span>
+                        <h3>Cloud-Based POS</h3>
+                        <p>Access your business data from anywhere with our cloud POS solution.</p>
+                        <ul>
+                            <li>Real-Time Sync</li>
+                            <li>Multi-Device Access</li>
+                            <li>Automatic Updates</li>
+                            <li>Data Backup</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card">
+                        <span class="service-icon">📦</span>
+                        <h3>Inventory Management</h3>
+                        <p>Complete control over your stock with advanced inventory tracking.</p>
+                        <ul>
+                            <li>Stock Tracking</li>
+                            <li>Low Stock Alerts</li>
+                            <li>Supplier Management</li>
+                            <li>Barcode Scanning</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card">
+                        <span class="service-icon">📊</span>
+                        <h3>Sales Analytics</h3>
+                        <p>Comprehensive reporting and insights to drive better business decisions.</p>
+                        <ul>
+                            <li>Sales Reports</li>
+                            <li>Customer Analytics</li>
+                            <li>Performance Metrics</li>
+                            <li>Trend Analysis</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card">
+                        <span class="service-icon">🏪</span>
+                        <h3>Multi-Store Support</h3>
+                        <p>Manage multiple locations from a single, unified platform.</p>
+                        <ul>
+                            <li>Centralized Management</li>
+                            <li>Location-Specific Reports</li>
+                            <li>Inventory Transfer</li>
+                            <li>Unified Customer Data</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social Media Management Section -->
+        <section class="features" id="social">
+            <div class="container">
+                <h2 class="section-title">Social Media Management</h2>
+                <p class="section-subtitle">Amplify your brand across all platforms</p>
+
+                <div class="services-grid">
+                    <div class="service-card">
+                        <span class="service-icon">📝</span>
+                        <h3>Content Strategy</h3>
+                        <p>Data-driven content planning to maximize engagement and reach.</p>
+                        <ul>
+                            <li>Content Calendar</li>
+                            <li>Audience Research</li>
+                            <li>Competitor Analysis</li>
+                            <li>Brand Voice Development</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card">
+                        <span class="service-icon">💭</span>
+                        <h3>Community Management</h3>
+                        <p>Build and nurture engaged communities around your brand.</p>
+                        <ul>
+                            <li>Comment Moderation</li>
+                            <li>Audience Engagement</li>
+                            <li>Crisis Management</li>
+                            <li>Influencer Relations</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card">
+                        <span class="service-icon">📈</span>
+                        <h3>Analytics & Reporting</h3>
+                        <p>Detailed insights into your social media performance and ROI.</p>
+                        <ul>
+                            <li>Performance Metrics</li>
+                            <li>Engagement Analytics</li>
+                            <li>Growth Tracking</li>
+                            <li>Custom Reports</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card">
+                        <span class="service-icon">🎯</span>
+                        <h3>Paid Advertising</h3>
+                        <p>Strategic paid campaigns to reach your target audience effectively.</p>
+                        <ul>
+                            <li>Campaign Management</li>
+                            <li>Ad Creative Design</li>
+                            <li>Audience Targeting</li>
+                            <li>ROI Optimization</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="hero" style="min-height: 60vh;">
+            <div class="container text-center">
+                <h2 class="section-title">Let's Build Something Great</h2>
+                <p class="section-subtitle" style="margin-bottom: 3rem;">
+                    Ready to transform your business with our premium services?
+                </p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-primary">Start Your Project</a>
+                    <a href="about.html" class="btn btn-secondary">Learn About Us</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>JAFF STUDIO</h3>
+                <p>Premium digital solutions for modern businesses. We transform ideas into reality with cutting-edge technology and creative excellence.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook">📘</a>
+                    <a href="#" aria-label="Twitter">🐦</a>
+                    <a href="#" aria-label="Instagram">📷</a>
+                    <a href="#" aria-label="LinkedIn">💼</a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul class="footer-links">
+                    <li><a href="services.html#web">Web Development</a></li>
+                    <li><a href="services.html#ai">AI Solutions</a></li>
+                    <li><a href="services.html#pos">POS Systems</a></li>
+                    <li><a href="services.html#social">Social Media</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <ul class="footer-links">
+                    <li>Email: info@jaffstudio.com</li>
+                    <li>Phone: +1 (555) 123-4567</li>
+                    <li>Address: 123 Business St, Tech City</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 Jaff Studio. All rights reserved. Crafted with precision and passion.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/3d-background.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

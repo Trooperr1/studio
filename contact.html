@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="theme-color" content="#0a0a0a">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Get in touch with Jaff Studio. Contact us for web development, AI solutions, POS systems, and social media management services.">
+    <meta name="keywords" content="contact Jaff Studio, get quote, business inquiry, support">
+    <meta name="author" content="Jaff Studio">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Contact Us - Jaff Studio">
+    <meta property="og:description" content="Get in touch with Jaff Studio for premium digital solutions">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contact Us - Jaff Studio">
+
+    <title>Contact Us - Jaff Studio</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Three.js for 3D Background -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- 3D Canvas Background -->
+    <canvas id="canvas-3d"></canvas>
+
+    <!-- Gradient Overlay -->
+    <div class="gradient-overlay"></div>
+
+    <!-- Floating Orbs -->
+    <div class="floating-orb orb-1"></div>
+    <div class="floating-orb orb-2"></div>
+    <div class="floating-orb orb-3"></div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">JAFF STUDIO</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Content Wrapper -->
+    <div class="content-wrapper">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Get In Touch</h1>
+                <p class="tagline">Let's Start a Conversation</p>
+                <p class="description">
+                    Have a project in mind? We'd love to hear from you.
+                    Let's discuss how we can help bring your vision to life.
+                </p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact">
+            <div class="container">
+                <div class="contact-content">
+                    <!-- Contact Information -->
+                    <div class="contact-info">
+                        <h2>Contact Information</h2>
+                        <p>
+                            Reach out to us through any of the following channels.
+                            Our team is ready to assist you with your digital needs.
+                        </p>
+
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <div class="contact-item-icon">📧</div>
+                                <div class="contact-item-text">
+                                    <h4>Email</h4>
+                                    <p>info@jaffstudio.com</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-item-icon">📱</div>
+                                <div class="contact-item-text">
+                                    <h4>Phone</h4>
+                                    <p>+1 (555) 123-4567</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-item-icon">📍</div>
+                                <div class="contact-item-text">
+                                    <h4>Office</h4>
+                                    <p>123 Business Street, Tech City</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-item-icon">🕒</div>
+                                <div class="contact-item-text">
+                                    <h4>Hours</h4>
+                                    <p>Mon - Fri: 9:00 AM - 6:00 PM</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="social-links" style="margin-top: 2rem;">
+                            <a href="#" aria-label="Facebook">📘</a>
+                            <a href="#" aria-label="Twitter">🐦</a>
+                            <a href="#" aria-label="Instagram">📷</a>
+                            <a href="#" aria-label="LinkedIn">💼</a>
+                            <a href="#" aria-label="GitHub">💻</a>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="contact-form">
+                        <form id="contact-form">
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" name="name" placeholder="John Doe" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" placeholder="+1 (555) 123-4567">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="service">Service Interested In</label>
+                                <select id="service" name="service" style="width: 100%; padding: 1rem; background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border-color); border-radius: 10px; color: var(--white); font-size: 1rem; font-family: inherit;">
+                                    <option value="">Select a service</option>
+                                    <option value="web">Web Development</option>
+                                    <option value="ai">AI Solutions</option>
+                                    <option value="pos">POS Systems</option>
+                                    <option value="social">Social Media Management</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Message *</label>
+                                <textarea id="message" name="message" placeholder="Tell us about your project..." required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary" style="width: 100%; cursor: pointer; font-size: 1rem;">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="features">
+            <div class="container">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Quick answers to common questions</p>
+
+                <div class="services-grid">
+                    <div class="service-card">
+                        <span class="service-icon">❓</span>
+                        <h3>How long does a typical project take?</h3>
+                        <p>
+                            Project timelines vary based on scope and complexity. A simple website might take
+                            2-4 weeks, while complex applications can take 2-6 months. We'll provide a detailed
+                            timeline during our initial consultation.
+                        </p>
+                    </div>
+
+                    <div class="service-card">
+                        <span class="service-icon">💰</span>
+                        <h3>What is your pricing structure?</h3>
+                        <p>
+                            We offer flexible pricing based on project requirements. We can work on a fixed-price
+                            basis for well-defined projects or hourly rates for ongoing work. Contact us for a
+                            custom quote tailored to your needs.
+                        </p>
+                    </div>
+
+                    <div class="service-card">
+                        <span class="service-icon">🔄</span>
+                        <h3>Do you provide ongoing support?</h3>
+                        <p>
+                            Yes! We offer comprehensive maintenance and support packages to ensure your digital
+                            solutions continue to perform optimally. We're here to help with updates, troubleshooting,
+                            and enhancements.
+                        </p>
+                    </div>
+
+                    <div class="service-card">
+                        <span class="service-icon">🌍</span>
+                        <h3>Do you work with international clients?</h3>
+                        <p>
+                            Absolutely! We work with clients worldwide and are experienced in remote collaboration.
+                            We use modern communication tools to ensure smooth project execution regardless of location.
+                        </p>
+                    </div>
+
+                    <div class="service-card">
+                        <span class="service-icon">🎨</span>
+                        <h3>Can you help with design as well?</h3>
+                        <p>
+                            Yes, we have a talented design team that can handle everything from branding and UI/UX
+                            design to custom graphics and animations. We offer complete end-to-end solutions.
+                        </p>
+                    </div>
+
+                    <div class="service-card">
+                        <span class="service-icon">🚀</span>
+                        <h3>What makes Jaff Studio different?</h3>
+                        <p>
+                            We combine technical expertise with creative excellence and a genuine commitment to
+                            client success. Our premium quality, attention to detail, and results-driven approach
+                            set us apart.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Map Section -->
+        <section class="services">
+            <div class="container">
+                <h2 class="section-title">Visit Our Office</h2>
+                <p class="section-subtitle">We'd love to meet you in person</p>
+
+                <div style="margin-top: 3rem; background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border-color); border-radius: 20px; height: 400px; display: flex; align-items: center; justify-content: center; font-size: 3rem;">
+                    🗺️
+                    <div style="position: absolute; font-size: 1rem; margin-top: 150px; color: var(--medium-gray);">
+                        123 Business Street, Tech City
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="hero" style="min-height: 50vh;">
+            <div class="container text-center">
+                <h2 class="section-title">Ready to Get Started?</h2>
+                <p class="section-subtitle" style="margin-bottom: 3rem;">
+                    Fill out the form above or give us a call. We're excited to hear about your project!
+                </p>
+                <div class="cta-buttons">
+                    <a href="services.html" class="btn btn-secondary">View Our Services</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>JAFF STUDIO</h3>
+                <p>Premium digital solutions for modern businesses. We transform ideas into reality with cutting-edge technology and creative excellence.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook">📘</a>
+                    <a href="#" aria-label="Twitter">🐦</a>
+                    <a href="#" aria-label="Instagram">📷</a>
+                    <a href="#" aria-label="LinkedIn">💼</a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul class="footer-links">
+                    <li><a href="services.html#web">Web Development</a></li>
+                    <li><a href="services.html#ai">AI Solutions</a></li>
+                    <li><a href="services.html#pos">POS Systems</a></li>
+                    <li><a href="services.html#social">Social Media</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <ul class="footer-links">
+                    <li>Email: info@jaffstudio.com</li>
+                    <li>Phone: +1 (555) 123-4567</li>
+                    <li>Address: 123 Business St, Tech City</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 Jaff Studio. All rights reserved. Crafted with precision and passion.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/3d-background.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

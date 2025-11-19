@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="theme-color" content="#0a0a0a">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Insights, tips, and latest trends in web development, AI, and digital transformation from Jaff Studio experts.">
+    <meta name="keywords" content="tech blog, web development blog, AI insights, digital trends">
+    <meta name="author" content="Jaff Studio">
+
+    <title>Blog - Jaff Studio</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Three.js for 3D Background -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- 3D Canvas Background -->
+    <canvas id="canvas-3d"></canvas>
+
+    <!-- Gradient Overlay -->
+    <div class="gradient-overlay"></div>
+
+    <!-- Floating Orbs -->
+    <div class="floating-orb orb-1"></div>
+    <div class="floating-orb orb-2"></div>
+    <div class="floating-orb orb-3"></div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">JAFF STUDIO</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Content Wrapper -->
+    <div class="content-wrapper">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Our Blog</h1>
+                <p class="tagline">Insights & Innovation</p>
+                <p class="description">
+                    Expert insights, industry trends, and practical tips from our team
+                    of digital professionals.
+                </p>
+            </div>
+        </section>
+
+        <!-- Blog Grid -->
+        <section class="services">
+            <div class="container">
+                <h2 class="section-title">Latest Articles</h2>
+                <p class="section-subtitle">Stay updated with the latest in tech</p>
+
+                <div class="blog-grid">
+                    <!-- Blog Post 1 -->
+                    <div class="blog-card">
+                        <div class="blog-image">
+                            <span>🚀</span>
+                        </div>
+                        <div class="blog-content">
+                            <span class="blog-category">Web Development</span>
+                            <div class="blog-meta">
+                                <span>📅 Nov 15, 2024</span>
+                                <span>⏱️ 5 min read</span>
+                            </div>
+                            <h3>The Future of Web Development in 2025</h3>
+                            <p>
+                                Exploring emerging trends and technologies that will shape the web development
+                                landscape in the coming year. From AI integration to new frameworks.
+                            </p>
+                            <a href="#" class="blog-read-more">Read More →</a>
+                        </div>
+                    </div>
+
+                    <!-- Blog Post 2 -->
+                    <div class="blog-card">
+                        <div class="blog-image">
+                            <span>🤖</span>
+                        </div>
+                        <div class="blog-content">
+                            <span class="blog-category">AI & Machine Learning</span>
+                            <div class="blog-meta">
+                                <span>📅 Nov 12, 2024</span>
+                                <span>⏱️ 7 min read</span>
+                            </div>
+                            <h3>How AI is Transforming Small Businesses</h3>
+                            <p>
+                                Discover practical ways small businesses can leverage artificial intelligence
+                                to automate tasks, improve customer service, and boost profitability.
+                            </p>
+                            <a href="#" class="blog-read-more">Read More →</a>
+                        </div>
+                    </div>
+
+                    <!-- Blog Post 3 -->
+                    <div class="blog-card">
+                        <div class="blog-image">
+                            <span>🎨</span>
+                        </div>
+                        <div class="blog-content">
+                            <span class="blog-category">Design</span>
+                            <div class="blog-meta">
+                                <span>📅 Nov 10, 2024</span>
+                                <span>⏱️ 6 min read</span>
+                            </div>
+                            <h3>UI/UX Design Principles That Actually Work</h3>
+                            <p>
+                                Learn the fundamental principles of effective UI/UX design that create
+                                intuitive, user-friendly experiences your customers will love.
+                            </p>
+                            <a href="#" class="blog-read-more">Read More →</a>
+                        </div>
+                    </div>
+
+                    <!-- Blog Post 4 -->
+                    <div class="blog-card">
+                        <div class="blog-image">
+                            <span>📱</span>
+                        </div>
+                        <div class="blog-content">
+                            <span class="blog-category">Social Media</span>
+                            <div class="blog-meta">
+                                <span>📅 Nov 8, 2024</span>
+                                <span>⏱️ 4 min read</span>
+                            </div>
+                            <h3>Social Media Strategy for 2025</h3>
+                            <p>
+                                Building an effective social media presence requires strategy. Here's how
+                                to create content that engages and converts your target audience.
+                            </p>
+                            <a href="#" class="blog-read-more">Read More →</a>
+                        </div>
+                    </div>
+
+                    <!-- Blog Post 5 -->
+                    <div class="blog-card">
+                        <div class="blog-image">
+                            <span>⚡</span>
+                        </div>
+                        <div class="blog-content">
+                            <span class="blog-category">Performance</span>
+                            <div class="blog-meta">
+                                <span>📅 Nov 5, 2024</span>
+                                <span>⏱️ 8 min read</span>
+                            </div>
+                            <h3>Optimizing Website Performance</h3>
+                            <p>
+                                Page speed matters. Learn advanced techniques to optimize your website's
+                                performance and provide lightning-fast user experiences.
+                            </p>
+                            <a href="#" class="blog-read-more">Read More →</a>
+                        </div>
+                    </div>
+
+                    <!-- Blog Post 6 -->
+                    <div class="blog-card">
+                        <div class="blog-image">
+                            <span>🔒</span>
+                        </div>
+                        <div class="blog-content">
+                            <span class="blog-category">Security</span>
+                            <div class="blog-meta">
+                                <span>📅 Nov 3, 2024</span>
+                                <span>⏱️ 6 min read</span>
+                            </div>
+                            <h3>Web Security Best Practices</h3>
+                            <p>
+                                Protect your website and users with these essential security measures.
+                                From SSL certificates to secure authentication practices.
+                            </p>
+                            <a href="#" class="blog-read-more">Read More →</a>
+                        </div>
+                    </div>
+
+                    <!-- Blog Post 7 -->
+                    <div class="blog-card">
+                        <div class="blog-image">
+                            <span>💰</span>
+                        </div>
+                        <div class="blog-content">
+                            <span class="blog-category">E-Commerce</span>
+                            <div class="blog-meta">
+                                <span>📅 Nov 1, 2024</span>
+                                <span>⏱️ 7 min read</span>
+                            </div>
+                            <h3>Building a Successful Online Store</h3>
+                            <p>
+                                Everything you need to know about launching and growing a profitable
+                                e-commerce business in today's competitive market.
+                            </p>
+                            <a href="#" class="blog-read-more">Read More →</a>
+                        </div>
+                    </div>
+
+                    <!-- Blog Post 8 -->
+                    <div class="blog-card">
+                        <div class="blog-image">
+                            <span>📊</span>
+                        </div>
+                        <div class="blog-content">
+                            <span class="blog-category">Analytics</span>
+                            <div class="blog-meta">
+                                <span>📅 Oct 29, 2024</span>
+                                <span>⏱️ 5 min read</span>
+                            </div>
+                            <h3>Data-Driven Decision Making</h3>
+                            <p>
+                                How to use analytics to make informed business decisions. Understanding
+                                metrics that matter and turning data into actionable insights.
+                            </p>
+                            <a href="#" class="blog-read-more">Read More →</a>
+                        </div>
+                    </div>
+
+                    <!-- Blog Post 9 -->
+                    <div class="blog-card">
+                        <div class="blog-image">
+                            <span>🎯</span>
+                        </div>
+                        <div class="blog-content">
+                            <span class="blog-category">Strategy</span>
+                            <div class="blog-meta">
+                                <span>📅 Oct 27, 2024</span>
+                                <span>⏱️ 6 min read</span>
+                            </div>
+                            <h3>Digital Transformation Guide</h3>
+                            <p>
+                                A comprehensive guide to successfully transforming your traditional
+                                business into a digital-first organization.
+                            </p>
+                            <a href="#" class="blog-read-more">Read More →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="features">
+            <div class="container text-center">
+                <h2 class="section-title">Subscribe to Our Newsletter</h2>
+                <p class="section-subtitle" style="margin-bottom: 3rem;">
+                    Get the latest insights delivered straight to your inbox
+                </p>
+
+                <div style="max-width: 600px; margin: 0 auto;">
+                    <form style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                        <input type="email" placeholder="Enter your email" required
+                               style="flex: 1; min-width: 250px; padding: 1rem; background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border-color); border-radius: 10px; color: var(--white); font-size: 1rem; font-family: inherit;">
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="hero" style="min-height: 60vh;">
+            <div class="container text-center">
+                <h2 class="section-title">Need Expert Guidance?</h2>
+                <p class="section-subtitle" style="margin-bottom: 3rem;">
+                    Let's discuss how we can help transform your business
+                </p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-primary">Get In Touch</a>
+                    <a href="services.html" class="btn btn-secondary">Our Services</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>JAFF STUDIO</h3>
+                <p>Premium digital solutions for modern businesses. We transform ideas into reality with cutting-edge technology and creative excellence.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook">📘</a>
+                    <a href="#" aria-label="Twitter">🐦</a>
+                    <a href="#" aria-label="Instagram">📷</a>
+                    <a href="#" aria-label="LinkedIn">💼</a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul class="footer-links">
+                    <li><a href="services.html#web">Web Development</a></li>
+                    <li><a href="services.html#ai">AI Solutions</a></li>
+                    <li><a href="services.html#pos">POS Systems</a></li>
+                    <li><a href="services.html#social">Social Media</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <ul class="footer-links">
+                    <li>Email: info@jaffstudio.com</li>
+                    <li>Phone: +1 (555) 123-4567</li>
+                    <li>Address: 123 Business St, Tech City</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 Jaff Studio. All rights reserved. Crafted with precision and passion.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/3d-background.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

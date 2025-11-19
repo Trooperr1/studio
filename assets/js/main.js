@@ -161,3 +161,56 @@ window.addEventListener('scroll', () => {
 window.addEventListener('load', () => {
     document.body.classList.add('loaded');
 });
+
+// ============================================
+// INTERACTIVE ELEMENTS
+// ============================================
+
+// Back to Top Button
+const backToTopBtn = document.querySelector('.back-to-top');
+
+if (backToTopBtn) {
+    // Show/hide back to top button
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 500) {
+            backToTopBtn.classList.add('visible');
+        } else {
+            backToTopBtn.classList.remove('visible');
+        }
+    });
+
+    // Scroll to top on click
+    backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+}
+
+// Scroll Progress Bar
+const scrollProgress = document.querySelector('.scroll-progress');
+
+if (scrollProgress) {
+    window.addEventListener('scroll', () => {
+        const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (window.scrollY / windowHeight) * 100;
+        scrollProgress.style.width = scrolled + '%';
+    });
+}
+
+// Animate testimonial cards on scroll
+document.querySelectorAll('.testimonial-card').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(30px)';
+    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    observer.observe(el);
+});
+
+// Animate portfolio items on scroll
+document.querySelectorAll('.portfolio-item, .blog-card, .team-member, .pricing-card').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(30px)';
+    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    observer.observe(el);
+});

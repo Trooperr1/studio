@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="theme-color" content="#0a0a0a">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Explore Jaff Studio's portfolio of successful projects in web development, AI solutions, POS systems, and social media management.">
+    <meta name="keywords" content="portfolio, projects, case studies, web development portfolio, AI projects">
+    <meta name="author" content="Jaff Studio">
+
+    <title>Portfolio - Jaff Studio</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Three.js for 3D Background -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- 3D Canvas Background -->
+    <canvas id="canvas-3d"></canvas>
+
+    <!-- Gradient Overlay -->
+    <div class="gradient-overlay"></div>
+
+    <!-- Floating Orbs -->
+    <div class="floating-orb orb-1"></div>
+    <div class="floating-orb orb-2"></div>
+    <div class="floating-orb orb-3"></div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">JAFF STUDIO</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Content Wrapper -->
+    <div class="content-wrapper">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Our Portfolio</h1>
+                <p class="tagline">Showcasing Excellence</p>
+                <p class="description">
+                    Explore our collection of successful projects that have transformed businesses
+                    across various industries.
+                </p>
+            </div>
+        </section>
+
+        <!-- Filter Section -->
+        <section class="services" style="padding-top: 2rem; padding-bottom: 2rem;">
+            <div class="container">
+                <div class="portfolio-filters" style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 3rem;">
+                    <button class="filter-btn active" data-filter="all">All Projects</button>
+                    <button class="filter-btn" data-filter="web">Web Development</button>
+                    <button class="filter-btn" data-filter="ai">AI Solutions</button>
+                    <button class="filter-btn" data-filter="pos">POS Systems</button>
+                    <button class="filter-btn" data-filter="social">Social Media</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Grid -->
+        <section class="features">
+            <div class="container">
+                <div class="portfolio-grid">
+                    <!-- Project 1 -->
+                    <div class="portfolio-item" data-category="web">
+                        <div class="portfolio-image">
+                            <span style="font-size: 5rem;">🌐</span>
+                        </div>
+                        <div class="portfolio-content">
+                            <span class="portfolio-category">Web Development</span>
+                            <h3>E-Commerce Platform</h3>
+                            <p>Built a complete e-commerce solution with 10,000+ products, real-time inventory, and advanced analytics.</p>
+                            <div class="portfolio-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">MongoDB</span>
+                            </div>
+                            <div class="portfolio-stats">
+                                <div class="stat">
+                                    <strong>300%</strong>
+                                    <span>Sales Increase</span>
+                                </div>
+                                <div class="stat">
+                                    <strong>50K+</strong>
+                                    <span>Active Users</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="portfolio-item" data-category="ai">
+                        <div class="portfolio-image">
+                            <span style="font-size: 5rem;">🤖</span>
+                        </div>
+                        <div class="portfolio-content">
+                            <span class="portfolio-category">AI Solutions</span>
+                            <h3>Customer Support Chatbot</h3>
+                            <p>AI-powered chatbot that handles 80% of customer inquiries automatically with natural language processing.</p>
+                            <div class="portfolio-tech">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">TensorFlow</span>
+                                <span class="tech-tag">NLP</span>
+                            </div>
+                            <div class="portfolio-stats">
+                                <div class="stat">
+                                    <strong>80%</strong>
+                                    <span>Query Resolution</span>
+                                </div>
+                                <div class="stat">
+                                    <strong>24/7</strong>
+                                    <span>Availability</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="portfolio-item" data-category="web">
+                        <div class="portfolio-image">
+                            <span style="font-size: 5rem;">📱</span>
+                        </div>
+                        <div class="portfolio-content">
+                            <span class="portfolio-category">Web Development</span>
+                            <h3>Progressive Web App</h3>
+                            <p>Cross-platform PWA with offline capabilities, push notifications, and native-like experience.</p>
+                            <div class="portfolio-tech">
+                                <span class="tech-tag">Vue.js</span>
+                                <span class="tech-tag">PWA</span>
+                                <span class="tech-tag">Firebase</span>
+                            </div>
+                            <div class="portfolio-stats">
+                                <div class="stat">
+                                    <strong>2x</strong>
+                                    <span>Faster Load</span>
+                                </div>
+                                <div class="stat">
+                                    <strong>95%</strong>
+                                    <span>User Retention</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="portfolio-item" data-category="pos">
+                        <div class="portfolio-image">
+                            <span style="font-size: 5rem;">🛒</span>
+                        </div>
+                        <div class="portfolio-content">
+                            <span class="portfolio-category">POS Systems</span>
+                            <h3>Multi-Store POS System</h3>
+                            <p>Cloud-based POS managing 15 retail locations with real-time sync and comprehensive analytics.</p>
+                            <div class="portfolio-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Cloud</span>
+                                <span class="tech-tag">Analytics</span>
+                            </div>
+                            <div class="portfolio-stats">
+                                <div class="stat">
+                                    <strong>15</strong>
+                                    <span>Locations</span>
+                                </div>
+                                <div class="stat">
+                                    <strong>100K+</strong>
+                                    <span>Transactions/Day</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 5 -->
+                    <div class="portfolio-item" data-category="social">
+                        <div class="portfolio-image">
+                            <span style="font-size: 5rem;">📊</span>
+                        </div>
+                        <div class="portfolio-content">
+                            <span class="portfolio-category">Social Media</span>
+                            <h3>Brand Growth Campaign</h3>
+                            <p>Comprehensive social media strategy that grew brand awareness and engagement across all platforms.</p>
+                            <div class="portfolio-tech">
+                                <span class="tech-tag">Instagram</span>
+                                <span class="tech-tag">Facebook</span>
+                                <span class="tech-tag">LinkedIn</span>
+                            </div>
+                            <div class="portfolio-stats">
+                                <div class="stat">
+                                    <strong>500%</strong>
+                                    <span>Growth</span>
+                                </div>
+                                <div class="stat">
+                                    <strong>2M+</strong>
+                                    <span>Reach</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 6 -->
+                    <div class="portfolio-item" data-category="ai">
+                        <div class="portfolio-image">
+                            <span style="font-size: 5rem;">👁️</span>
+                        </div>
+                        <div class="portfolio-content">
+                            <span class="portfolio-category">AI Solutions</span>
+                            <h3>Visual Quality Control</h3>
+                            <p>Computer vision system for automated product quality inspection in manufacturing.</p>
+                            <div class="portfolio-tech">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">OpenCV</span>
+                                <span class="tech-tag">Deep Learning</span>
+                            </div>
+                            <div class="portfolio-stats">
+                                <div class="stat">
+                                    <strong>99%</strong>
+                                    <span>Accuracy</span>
+                                </div>
+                                <div class="stat">
+                                    <strong>70%</strong>
+                                    <span>Cost Reduction</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 7 -->
+                    <div class="portfolio-item" data-category="web">
+                        <div class="portfolio-image">
+                            <span style="font-size: 5rem;">🏥</span>
+                        </div>
+                        <div class="portfolio-content">
+                            <span class="portfolio-category">Web Development</span>
+                            <h3>Healthcare Management System</h3>
+                            <p>HIPAA-compliant patient management system with appointment scheduling and telemedicine.</p>
+                            <div class="portfolio-tech">
+                                <span class="tech-tag">Angular</span>
+                                <span class="tech-tag">Security</span>
+                                <span class="tech-tag">WebRTC</span>
+                            </div>
+                            <div class="portfolio-stats">
+                                <div class="stat">
+                                    <strong>5K+</strong>
+                                    <span>Patients</span>
+                                </div>
+                                <div class="stat">
+                                    <strong>HIPAA</strong>
+                                    <span>Compliant</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 8 -->
+                    <div class="portfolio-item" data-category="pos">
+                        <div class="portfolio-image">
+                            <span style="font-size: 5rem;">🍔</span>
+                        </div>
+                        <div class="portfolio-content">
+                            <span class="portfolio-category">POS Systems</span>
+                            <h3>Restaurant POS Solution</h3>
+                            <p>Complete restaurant management with order tracking, kitchen display, and delivery integration.</p>
+                            <div class="portfolio-tech">
+                                <span class="tech-tag">React Native</span>
+                                <span class="tech-tag">Cloud</span>
+                                <span class="tech-tag">Integration</span>
+                            </div>
+                            <div class="portfolio-stats">
+                                <div class="stat">
+                                    <strong>40%</strong>
+                                    <span>Faster Orders</span>
+                                </div>
+                                <div class="stat">
+                                    <strong>25</strong>
+                                    <span>Restaurants</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="hero" style="min-height: 60vh;">
+            <div class="container text-center">
+                <h2 class="section-title">Ready to Start Your Project?</h2>
+                <p class="section-subtitle" style="margin-bottom: 3rem;">
+                    Let's create the next success story together
+                </p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-primary">Start Your Project</a>
+                    <a href="services.html" class="btn btn-secondary">View Services</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>JAFF STUDIO</h3>
+                <p>Premium digital solutions for modern businesses. We transform ideas into reality with cutting-edge technology and creative excellence.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook">📘</a>
+                    <a href="#" aria-label="Twitter">🐦</a>
+                    <a href="#" aria-label="Instagram">📷</a>
+                    <a href="#" aria-label="LinkedIn">💼</a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul class="footer-links">
+                    <li><a href="services.html#web">Web Development</a></li>
+                    <li><a href="services.html#ai">AI Solutions</a></li>
+                    <li><a href="services.html#pos">POS Systems</a></li>
+                    <li><a href="services.html#social">Social Media</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <ul class="footer-links">
+                    <li>Email: info@jaffstudio.com</li>
+                    <li>Phone: +1 (555) 123-4567</li>
+                    <li>Address: 123 Business St, Tech City</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 Jaff Studio. All rights reserved. Crafted with precision and passion.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/3d-background.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/portfolio.js"></script>
+</body>
+</html>

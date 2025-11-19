@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="theme-color" content="#0a0a0a">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Transparent pricing for Jaff Studio's premium digital services. Find the perfect package for your business needs.">
+    <meta name="keywords" content="pricing, packages, web development cost, AI solutions pricing">
+    <meta name="author" content="Jaff Studio">
+
+    <title>Pricing - Jaff Studio</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Three.js for 3D Background -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- 3D Canvas Background -->
+    <canvas id="canvas-3d"></canvas>
+
+    <!-- Gradient Overlay -->
+    <div class="gradient-overlay"></div>
+
+    <!-- Floating Orbs -->
+    <div class="floating-orb orb-1"></div>
+    <div class="floating-orb orb-2"></div>
+    <div class="floating-orb orb-3"></div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">JAFF STUDIO</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Content Wrapper -->
+    <div class="content-wrapper">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Pricing Plans</h1>
+                <p class="tagline">Transparent & Flexible</p>
+                <p class="description">
+                    Choose the perfect plan for your business. All plans include premium support
+                    and can be customized to your specific needs.
+                </p>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section class="services">
+            <div class="container">
+                <h2 class="section-title">Choose Your Plan</h2>
+                <p class="section-subtitle">Flexible pricing for businesses of all sizes</p>
+
+                <div class="pricing-grid">
+                    <!-- Starter Plan -->
+                    <div class="pricing-card">
+                        <h3>Starter</h3>
+                        <div class="price">$999</div>
+                        <div class="price-period">One-time payment</div>
+
+                        <ul class="pricing-features">
+                            <li>5-Page Website</li>
+                            <li>Responsive Design</li>
+                            <li>Basic SEO Setup</li>
+                            <li>Contact Form</li>
+                            <li>Social Media Integration</li>
+                            <li>1 Month Support</li>
+                            <li>Basic Analytics</li>
+                        </ul>
+
+                        <a href="contact.html" class="btn btn-secondary">Get Started</a>
+                    </div>
+
+                    <!-- Professional Plan (Featured) -->
+                    <div class="pricing-card featured">
+                        <div class="pricing-badge">POPULAR</div>
+                        <h3>Professional</h3>
+                        <div class="price">$2,999</div>
+                        <div class="price-period">One-time payment</div>
+
+                        <ul class="pricing-features">
+                            <li>10-Page Website</li>
+                            <li>Custom Design</li>
+                            <li>Advanced SEO</li>
+                            <li>CMS Integration</li>
+                            <li>E-commerce Ready</li>
+                            <li>3 Months Support</li>
+                            <li>Advanced Analytics</li>
+                            <li>Performance Optimization</li>
+                        </ul>
+
+                        <a href="contact.html" class="btn btn-primary">Get Started</a>
+                    </div>
+
+                    <!-- Enterprise Plan -->
+                    <div class="pricing-card">
+                        <h3>Enterprise</h3>
+                        <div class="price">Custom</div>
+                        <div class="price-period">Contact for quote</div>
+
+                        <ul class="pricing-features">
+                            <li>Unlimited Pages</li>
+                            <li>Premium Custom Design</li>
+                            <li>Enterprise SEO</li>
+                            <li>Custom Features</li>
+                            <li>AI Integration</li>
+                            <li>12 Months Support</li>
+                            <li>Dedicated Account Manager</li>
+                            <li>Priority Support 24/7</li>
+                            <li>Training & Documentation</li>
+                        </ul>
+
+                        <a href="contact.html" class="btn btn-secondary">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Additional Services -->
+        <section class="features">
+            <div class="container">
+                <h2 class="section-title">Additional Services</h2>
+                <p class="section-subtitle">Enhance your package with premium add-ons</p>
+
+                <div class="services-grid">
+                    <div class="service-card">
+                        <span class="service-icon">🤖</span>
+                        <h3>AI Integration</h3>
+                        <p class="price" style="font-size: 2rem; margin-bottom: 1rem;">From $1,500</p>
+                        <ul>
+                            <li>Custom AI Chatbot</li>
+                            <li>Automated Workflows</li>
+                            <li>Predictive Analytics</li>
+                            <li>Integration Support</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card">
+                        <span class="service-icon">🛒</span>
+                        <h3>POS System</h3>
+                        <p class="price" style="font-size: 2rem; margin-bottom: 1rem;">From $2,500</p>
+                        <ul>
+                            <li>Cloud-Based Solution</li>
+                            <li>Inventory Management</li>
+                            <li>Sales Analytics</li>
+                            <li>Multi-Store Support</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card">
+                        <span class="service-icon">📱</span>
+                        <h3>Social Media Management</h3>
+                        <p class="price" style="font-size: 2rem; margin-bottom: 1rem;">$799/month</p>
+                        <ul>
+                            <li>Content Creation</li>
+                            <li>Daily Posting</li>
+                            <li>Community Management</li>
+                            <li>Monthly Reports</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card">
+                        <span class="service-icon">🔧</span>
+                        <h3>Maintenance & Support</h3>
+                        <p class="price" style="font-size: 2rem; margin-bottom: 1rem;">$299/month</p>
+                        <ul>
+                            <li>Regular Updates</li>
+                            <li>Security Monitoring</li>
+                            <li>Bug Fixes</li>
+                            <li>Technical Support</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="services">
+            <div class="container">
+                <h2 class="section-title">Pricing FAQs</h2>
+                <p class="section-subtitle">Common questions about our pricing</p>
+
+                <div class="services-grid">
+                    <div class="service-card">
+                        <span class="service-icon">❓</span>
+                        <h3>Are there any hidden fees?</h3>
+                        <p>
+                            No hidden fees! All our pricing is transparent. The quoted price includes everything
+                            mentioned in the package. Any additional services will be discussed and approved by you first.
+                        </p>
+                    </div>
+
+                    <div class="service-card">
+                        <span class="service-icon">💳</span>
+                        <h3>What payment methods do you accept?</h3>
+                        <p>
+                            We accept all major credit cards, PayPal, bank transfers, and cryptocurrency.
+                            Payment plans are available for enterprise packages.
+                        </p>
+                    </div>
+
+                    <div class="service-card">
+                        <span class="service-icon">🔄</span>
+                        <h3>Can I upgrade my plan later?</h3>
+                        <p>
+                            Absolutely! You can upgrade your plan at any time. We'll credit what you've already
+                            paid toward the new package.
+                        </p>
+                    </div>
+
+                    <div class="service-card">
+                        <span class="service-icon">⏰</span>
+                        <h3>What is the typical timeline?</h3>
+                        <p>
+                            Starter packages: 2-4 weeks. Professional: 4-8 weeks. Enterprise: 8-16 weeks.
+                            Timeline varies based on project complexity and your feedback speed.
+                        </p>
+                    </div>
+
+                    <div class="service-card">
+                        <span class="service-icon">🌐</span>
+                        <h3>Do you provide hosting?</h3>
+                        <p>
+                            We can recommend reliable hosting providers or set up hosting for you.
+                            Hosting costs are separate and typically range from $10-$100/month.
+                        </p>
+                    </div>
+
+                    <div class="service-card">
+                        <span class="service-icon">📞</span>
+                        <h3>What does support include?</h3>
+                        <p>
+                            Support includes bug fixes, minor updates, technical assistance, and consultation.
+                            Major feature additions may require additional fees.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="hero" style="min-height: 60vh;">
+            <div class="container text-center">
+                <h2 class="section-title">Ready to Get Started?</h2>
+                <p class="section-subtitle" style="margin-bottom: 3rem;">
+                    Let's discuss which plan is perfect for your business
+                </p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-primary">Contact Us</a>
+                    <a href="portfolio.html" class="btn btn-secondary">View Portfolio</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>JAFF STUDIO</h3>
+                <p>Premium digital solutions for modern businesses. We transform ideas into reality with cutting-edge technology and creative excellence.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook">📘</a>
+                    <a href="#" aria-label="Twitter">🐦</a>
+                    <a href="#" aria-label="Instagram">📷</a>
+                    <a href="#" aria-label="LinkedIn">💼</a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul class="footer-links">
+                    <li><a href="services.html#web">Web Development</a></li>
+                    <li><a href="services.html#ai">AI Solutions</a></li>
+                    <li><a href="services.html#pos">POS Systems</a></li>
+                    <li><a href="services.html#social">Social Media</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <ul class="footer-links">
+                    <li>Email: info@jaffstudio.com</li>
+                    <li>Phone: +1 (555) 123-4567</li>
+                    <li>Address: 123 Business St, Tech City</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 Jaff Studio. All rights reserved. Crafted with precision and passion.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/3d-background.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

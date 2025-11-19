@@ -241,38 +241,6 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
-
-// ============================================
-// DARK/LIGHT MODE TOGGLE
-// ============================================
-
-// Check for saved theme preference or default to 'dark'
-const currentTheme = localStorage.getItem('theme') || 'dark';
-document.body.setAttribute('data-theme', currentTheme);
-
-// Create theme toggle button
-const themeToggle = document.createElement('button');
-themeToggle.className = 'theme-toggle';
-themeToggle.setAttribute('aria-label', 'Toggle theme');
-themeToggle.innerHTML = currentTheme === 'dark' 
-    ? '<i class="fas fa-sun"></i>' 
-    : '<i class="fas fa-moon"></i>';
-document.body.appendChild(themeToggle);
-
-// Toggle theme
-themeToggle.addEventListener('click', () => {
-    const theme = document.body.getAttribute('data-theme');
-    const newTheme = theme === 'dark' ? 'light' : 'dark';
-    
-    document.body.setAttribute('data-theme', newTheme);
-    localStorage.setItem('theme', newTheme);
-    
-    // Update icon
-    themeToggle.innerHTML = newTheme === 'dark' 
-        ? '<i class="fas fa-sun"></i>' 
-        : '<i class="fas fa-moon"></i>';
-});
-
 // ============================================
 // IMAGE LAZY LOADING
 // ============================================

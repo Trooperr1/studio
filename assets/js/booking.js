@@ -254,13 +254,18 @@ formFields.forEach(fieldId => {
 });
 
 // Form submission
-document.getElementById('bookingForm').addEventListener('submit', (e) => {
+document.getElementById('bookingForm').addEventListener('submit', async (e) => {
     e.preventDefault();
 
     if (!selectedDate || !selectedTime) {
         showNotification('Please select a date and time for your consultation', 'error');
         return;
     }
+
+    const submitBtn = document.getElementById('submitBooking');
+    const originalText = submitBtn.innerHTML;
+    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
+    submitBtn.disabled = true;
 
     // Get form data
     const formData = {
@@ -275,31 +280,47 @@ document.getElementById('bookingForm').addEventListener('submit', (e) => {
         time: selectedTime
     };
 
-    // Here you would typically send this to your backend
-    console.log('Booking Data:', formData);
-
-    // Show success message
-    showNotification('Booking confirmed! You will receive a confirmation email shortly.', 'success');
-
-    // Reset form after 2 seconds
-    setTimeout(() => {
-        document.getElementById('bookingForm').reset();
-        selectedDate = null;
-        selectedTime = null;
-        document.getElementById('selectedDateTime').style.display = 'none';
-        document.getElementById('timeSlotContainer').style.display = 'none';
-
-        // Remove selections
-        const selectedElements = document.querySelectorAll('.selected');
-        selectedElements.forEach(el => {
-            el.classList.remove('selected');
-            el.style.background = 'rgba(255, 255, 255, 0.05)';
-            el.style.color = 'var(--white)';
-            el.style.borderColor = 'var(--border-color)';
+    try {
+        const response = await fetch('/api/booking', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(formData)
         });
 
-        updateSubmitButton();
-    }, 2000);
+        const result = await response.json();
+
+        if (result.success) {
+            showNotification('Booking confirmed! You will receive a confirmation email shortly.', 'success');
+
+            // Reset form after 2 seconds
+            setTimeout(() => {
+                document.getElementById('bookingForm').reset();
+                selectedDate = null;
+                selectedTime = null;
+                document.getElementById('selectedDateTime').style.display = 'none';
+                document.getElementById('timeSlotContainer').style.display = 'none';
+
+                // Remove selections
+                const selectedElements = document.querySelectorAll('.selected');
+                selectedElements.forEach(el => {
+                    el.classList.remove('selected');
+                    el.style.background = 'rgba(255, 255, 255, 0.05)';
+                    el.style.color = 'var(--white)';
+                    el.style.borderColor = 'var(--border-color)';
+                });
+
+                updateSubmitButton();
+            }, 2000);
+        } else {
+            showNotification(result.message || 'Booking failed. Please try again.', 'error');
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        showNotification('Failed to process booking. Please try again later.', 'error');
+    } finally {
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
+    }
 });
 
 // Show notification

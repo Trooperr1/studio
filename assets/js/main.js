@@ -58,21 +58,40 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // Form Submission Handler
 const contactForm = document.getElementById('contact-form');
 if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
+    contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
+
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
+        const originalText = submitBtn.innerHTML;
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+        submitBtn.disabled = true;
 
         // Get form data
         const formData = new FormData(contactForm);
         const data = Object.fromEntries(formData);
 
-        // Here you would typically send the data to a server
-        console.log('Form submitted:', data);
+        try {
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data)
+            });
 
-        // Show success message
-        alert('Thank you for your message! We will get back to you soon.');
+            const result = await response.json();
 
-        // Reset form
-        contactForm.reset();
+            if (result.success) {
+                alert('Thank you for your message! We will get back to you soon.');
+                contactForm.reset();
+            } else {
+                alert(result.message || 'Something went wrong. Please try again.');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            alert('Failed to send message. Please try again later.');
+        } finally {
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
+        }
     });
 }
 

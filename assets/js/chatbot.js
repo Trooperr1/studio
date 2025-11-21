@@ -168,7 +168,7 @@ class AIAssistant {
                 this.showTyping();
                 setTimeout(() => {
                     this.hideTyping();
-                    this.addMessage('Thank you! We\'ve received your email and will be in touch soon. Is there anything else I can help you with?', 'bot');
+                    this.addMessage(getChatbotText('emailThanks'), 'bot');
                 }, 1000);
             } else {
                 emailInput.style.borderColor = '#f44336';
@@ -203,7 +203,7 @@ class AIAssistant {
             this.showTyping();
             setTimeout(() => {
                 this.hideTyping();
-                this.addMessage('Thank you! We\'ve received your email and will be in touch soon. Is there anything else I can help you with?', 'bot');
+                this.addMessage(getChatbotText('emailThanks'), 'bot');
             }, 1000);
             return;
         }
@@ -293,41 +293,41 @@ class AIAssistant {
 
         // Services
         if (lowerMessage.includes('service') || lowerMessage.includes('what do you do') || lowerMessage.includes('what can you')) {
-            return 'We offer comprehensive digital solutions:\n\n🌐 Web Development - Custom websites & applications\n🤖 AI Solutions - Chatbots & automation\n💳 POS Systems - Modern point-of-sale\n📱 Social Media - Complete management\n\nWhich service interests you most?';
+            return getChatbotText('aiServices');
         }
 
         // Pricing
         if (lowerMessage.includes('price') || lowerMessage.includes('cost') || lowerMessage.includes('how much')) {
-            return 'Our packages start at $299/month for essentials, $599/month for professional features, and $999/month for our premium complete solution. Each can be customized to your needs. Would you like detailed pricing information?';
+            return getChatbotText('aiPricing');
         }
 
         // Contact
         if (lowerMessage.includes('contact') || lowerMessage.includes('phone') || lowerMessage.includes('email') || lowerMessage.includes('reach')) {
-            return 'You can reach us at:\n\n📧 contact@jaffstudio.com\n📱 +41 (0) 44 123 4567\n📍 Bahnhofstrasse 123, 8001 Zürich, Switzerland\n\nOr visit our contact page for a form!';
+            return getChatbotText('aiContact');
         }
 
         // Portfolio
         if (lowerMessage.includes('portfolio') || lowerMessage.includes('project') || lowerMessage.includes('example') || lowerMessage.includes('work')) {
-            return 'We\'ve completed amazing projects across various industries! Check out our portfolio at jaffstudio.com/portfolio.html to see our latest work. Would you like me to tell you about a specific project type?';
+            return getChatbotText('aiPortfolio');
         }
 
         // Booking
         if (lowerMessage.includes('book') || lowerMessage.includes('appointment') || lowerMessage.includes('schedule') || lowerMessage.includes('meet')) {
-            return 'I\'d be happy to help you schedule a consultation! Visit jaffstudio.com/booking.html to choose a convenient time, or I can collect your information and have our team reach out. What works best for you?';
+            return getChatbotText('aiBooking');
         }
 
         // Greetings
-        if (lowerMessage.includes('hello') || lowerMessage.includes('hi') || lowerMessage.includes('hey')) {
-            return 'Hello! 👋 Great to hear from you! I\'m here to help with any questions about Jaff Studio\'s services. What would you like to know?';
+        if (lowerMessage.includes('hello') || lowerMessage.includes('hi') || lowerMessage.includes('hey') || lowerMessage.includes('bonjour') || lowerMessage.includes('hallo')) {
+            return getChatbotText('aiGreeting');
         }
 
         // Thank you
-        if (lowerMessage.includes('thank') || lowerMessage.includes('thanks')) {
-            return 'You\'re very welcome! 😊 Is there anything else I can help you with today?';
+        if (lowerMessage.includes('thank') || lowerMessage.includes('thanks') || lowerMessage.includes('merci') || lowerMessage.includes('danke')) {
+            return getChatbotText('aiThanks');
         }
 
         // Default response
-        return 'That\'s a great question! I\'d love to give you detailed information. You can also contact our team directly at contact@jaffstudio.com or fill out our contact form for personalized assistance!';
+        return getChatbotText('aiDefault');
     }
 }
 

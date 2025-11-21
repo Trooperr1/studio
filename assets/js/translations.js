@@ -215,7 +215,15 @@ const chatbotTranslations = {
         emailAsk: "I'd love to send you more information! May I have your email address?",
         emailThanks: "Thank you! We'll send you more information shortly.",
         invalidEmail: "Please enter a valid email address.",
-        typeMessage: "Type your message..."
+        typeMessage: "Type your message...",
+        aiServices: "We offer comprehensive digital solutions:\n\n🌐 Web Development - Custom websites & applications\n🤖 AI Solutions - Chatbots & automation\n💳 POS Systems - Modern point-of-sale\n📱 Social Media - Complete management\n\nWhich service interests you most?",
+        aiPricing: "Our packages start at $299/month for essentials, $599/month for professional features, and $999/month for our premium complete solution. Each can be customized to your needs. Would you like detailed pricing information?",
+        aiContact: "You can reach us at:\n\n📧 contact@jaffstudio.com\n📱 +41 (0) 44 123 4567\n📍 Bahnhofstrasse 123, 8001 Zürich, Switzerland\n\nOr visit our contact page for a form!",
+        aiPortfolio: "We've completed amazing projects across various industries! Check out our portfolio at jaffstudio.com/portfolio.html to see our latest work. Would you like me to tell you about a specific project type?",
+        aiBooking: "I'd be happy to help you schedule a consultation! Visit jaffstudio.com/booking.html to choose a convenient time, or I can collect your information and have our team reach out. What works best for you?",
+        aiGreeting: "Hello! 👋 Great to hear from you! I'm here to help with any questions about Jaff Studio's services. What would you like to know?",
+        aiThanks: "You're very welcome! 😊 Is there anything else I can help you with today?",
+        aiDefault: "That's a great question! I'd love to give you detailed information. You can also contact our team directly at contact@jaffstudio.com or fill out our contact form for personalized assistance!"
     },
     fr: {
         welcome: "Bonjour! 👋 Bienvenue chez Jaff Studio! Je suis là pour vous aider avec nos services. Comment puis-je vous aider aujourd'hui?",
@@ -232,7 +240,15 @@ const chatbotTranslations = {
         emailAsk: "J'aimerais vous envoyer plus d'informations! Puis-je avoir votre adresse email?",
         emailThanks: "Merci! Nous vous enverrons plus d'informations sous peu.",
         invalidEmail: "Veuillez entrer une adresse email valide.",
-        typeMessage: "Tapez votre message..."
+        typeMessage: "Tapez votre message...",
+        aiServices: "Nous offrons des solutions numériques complètes:\n\n🌐 Développement Web - Sites web et applications sur mesure\n🤖 Solutions IA - Chatbots et automatisation\n💳 Systèmes PDV - Points de vente modernes\n📱 Réseaux Sociaux - Gestion complète\n\nQuel service vous intéresse le plus?",
+        aiPricing: "Nos forfaits commencent à 299€/mois pour l'essentiel, 599€/mois pour les fonctionnalités professionnelles, et 999€/mois pour notre solution premium complète. Chacun peut être personnalisé selon vos besoins. Souhaitez-vous des informations détaillées sur les tarifs?",
+        aiContact: "Vous pouvez nous joindre à:\n\n📧 contact@jaffstudio.com\n📱 +41 (0) 44 123 4567\n📍 Bahnhofstrasse 123, 8001 Zürich, Suisse\n\nOu visitez notre page de contact!",
+        aiPortfolio: "Nous avons réalisé des projets incroyables dans divers secteurs! Consultez notre portfolio sur jaffstudio.com/portfolio.html pour voir nos derniers travaux. Souhaitez-vous en savoir plus sur un type de projet spécifique?",
+        aiBooking: "Je serais ravi de vous aider à planifier une consultation! Visitez jaffstudio.com/booking.html pour choisir un moment qui vous convient, ou je peux collecter vos informations pour que notre équipe vous contacte. Que préférez-vous?",
+        aiGreeting: "Bonjour! 👋 Ravi de vous entendre! Je suis là pour répondre à toutes vos questions sur les services de Jaff Studio. Que souhaitez-vous savoir?",
+        aiThanks: "Je vous en prie! 😊 Y a-t-il autre chose que je puisse faire pour vous aujourd'hui?",
+        aiDefault: "C'est une excellente question! J'aimerais vous donner des informations détaillées. Vous pouvez également contacter notre équipe directement à contact@jaffstudio.com ou remplir notre formulaire de contact pour une assistance personnalisée!"
     },
     de: {
         welcome: "Hallo! 👋 Willkommen bei Jaff Studio! Ich bin hier, um Ihnen bei unseren Dienstleistungen zu helfen. Wie kann ich Ihnen heute helfen?",
@@ -249,7 +265,15 @@ const chatbotTranslations = {
         emailAsk: "Ich würde Ihnen gerne weitere Informationen senden! Darf ich Ihre E-Mail-Adresse haben?",
         emailThanks: "Danke! Wir werden Ihnen in Kürze weitere Informationen senden.",
         invalidEmail: "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
-        typeMessage: "Nachricht eingeben..."
+        typeMessage: "Nachricht eingeben...",
+        aiServices: "Wir bieten umfassende digitale Lösungen:\n\n🌐 Webentwicklung - Maßgeschneiderte Websites & Anwendungen\n🤖 KI-Lösungen - Chatbots & Automatisierung\n💳 POS-Systeme - Moderne Kassenlösungen\n📱 Social Media - Komplettes Management\n\nWelcher Service interessiert Sie am meisten?",
+        aiPricing: "Unsere Pakete beginnen bei 299€/Monat für das Wesentliche, 599€/Monat für professionelle Funktionen und 999€/Monat für unsere komplette Premium-Lösung. Jedes kann an Ihre Bedürfnisse angepasst werden. Möchten Sie detaillierte Preisinformationen?",
+        aiContact: "Sie erreichen uns unter:\n\n📧 contact@jaffstudio.com\n📱 +41 (0) 44 123 4567\n📍 Bahnhofstrasse 123, 8001 Zürich, Schweiz\n\nOder besuchen Sie unsere Kontaktseite!",
+        aiPortfolio: "Wir haben großartige Projekte in verschiedenen Branchen abgeschlossen! Schauen Sie sich unser Portfolio unter jaffstudio.com/portfolio.html an, um unsere neuesten Arbeiten zu sehen. Möchten Sie mehr über einen bestimmten Projekttyp erfahren?",
+        aiBooking: "Ich helfe Ihnen gerne bei der Terminplanung! Besuchen Sie jaffstudio.com/booking.html, um eine passende Zeit zu wählen, oder ich kann Ihre Informationen sammeln und unser Team kontaktiert Sie. Was passt Ihnen besser?",
+        aiGreeting: "Hallo! 👋 Schön von Ihnen zu hören! Ich bin hier, um alle Fragen zu den Dienstleistungen von Jaff Studio zu beantworten. Was möchten Sie wissen?",
+        aiThanks: "Sehr gerne! 😊 Gibt es noch etwas, womit ich Ihnen heute helfen kann?",
+        aiDefault: "Das ist eine großartige Frage! Ich würde Ihnen gerne detaillierte Informationen geben. Sie können unser Team auch direkt unter contact@jaffstudio.com kontaktieren oder unser Kontaktformular für persönliche Unterstützung ausfüllen!"
     }
 };
 

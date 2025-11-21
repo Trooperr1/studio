@@ -1,4 +1,10 @@
-require('dotenv').config();
+const result = require('dotenv').config();
+if (result.error) {
+    console.log('Error loading .env file:', result.error.message);
+} else {
+    console.log('.env file loaded successfully');
+}
+
 const express = require('express');
 const cors = require('cors');
 const nodemailer = require('nodemailer');
@@ -6,6 +12,10 @@ const path = require('path');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+
+// Debug: Show loaded values
+console.log('SMTP_USER:', process.env.SMTP_USER ? 'Set' : 'NOT SET');
+console.log('SMTP_PASS:', process.env.SMTP_PASS ? 'Set' : 'NOT SET');
 
 // Middleware
 app.use(cors());

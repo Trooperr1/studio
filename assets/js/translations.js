@@ -29,6 +29,9 @@ const translations = {
         // Contact
         contactTitle: "Get In Touch",
         contactTagline: "Let's Start a Conversation",
+        contactDesc: "Have a project in mind? We'd love to hear from you. Let's discuss how we can help bring your vision to life.",
+        contactInfo: "Contact Information",
+        contactInfoDesc: "Reach out to us through any of the following channels. Our team is ready to assist you with your digital needs.",
         fullName: "Full Name",
         email: "Email Address",
         phone: "Phone Number",
@@ -37,6 +40,8 @@ const translations = {
 
         // Booking
         bookingTitle: "Book Your Consultation",
+        bookingTagline: "Schedule a Meeting with Our Experts",
+        bookingDesc: "Choose a convenient time and let's discuss how we can help transform your business with our premium digital solutions.",
         selectDate: "Select Date & Time",
         yourInfo: "Your Information",
         service: "Service",
@@ -85,6 +90,9 @@ const translations = {
         // Contact
         contactTitle: "Contactez-Nous",
         contactTagline: "Commençons une Conversation",
+        contactDesc: "Vous avez un projet en tête? Nous serions ravis de vous entendre. Discutons de la manière dont nous pouvons donner vie à votre vision.",
+        contactInfo: "Coordonnées",
+        contactInfoDesc: "Contactez-nous via l'un des canaux suivants. Notre équipe est prête à vous aider avec vos besoins numériques.",
         fullName: "Nom Complet",
         email: "Adresse Email",
         phone: "Numéro de Téléphone",
@@ -93,6 +101,8 @@ const translations = {
 
         // Booking
         bookingTitle: "Réservez Votre Consultation",
+        bookingTagline: "Planifiez une Réunion avec Nos Experts",
+        bookingDesc: "Choisissez un moment qui vous convient et discutons de la manière dont nous pouvons transformer votre entreprise avec nos solutions numériques premium.",
         selectDate: "Sélectionnez Date et Heure",
         yourInfo: "Vos Informations",
         service: "Service",
@@ -141,6 +151,9 @@ const translations = {
         // Contact
         contactTitle: "Kontaktieren Sie Uns",
         contactTagline: "Lassen Sie uns ein Gespräch beginnen",
+        contactDesc: "Haben Sie ein Projekt im Sinn? Wir würden gerne von Ihnen hören. Lassen Sie uns besprechen, wie wir Ihre Vision zum Leben erwecken können.",
+        contactInfo: "Kontaktinformationen",
+        contactInfoDesc: "Erreichen Sie uns über einen der folgenden Kanäle. Unser Team ist bereit, Ihnen bei Ihren digitalen Bedürfnissen zu helfen.",
         fullName: "Vollständiger Name",
         email: "E-Mail-Adresse",
         phone: "Telefonnummer",
@@ -149,6 +162,8 @@ const translations = {
 
         // Booking
         bookingTitle: "Buchen Sie Ihre Beratung",
+        bookingTagline: "Planen Sie ein Meeting mit Unseren Experten",
+        bookingDesc: "Wählen Sie einen passenden Zeitpunkt und lassen Sie uns besprechen, wie wir Ihr Unternehmen mit unseren Premium-Digitallösungen transformieren können.",
         selectDate: "Datum und Uhrzeit wählen",
         yourInfo: "Ihre Informationen",
         service: "Dienstleistung",

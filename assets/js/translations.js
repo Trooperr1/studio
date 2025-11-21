@@ -1,4 +1,5 @@
-const translations = {
+// Make translations globally accessible
+window.translations = {
     en: {
         // Navigation
         home: "Home",
@@ -411,24 +412,24 @@ const translations = {
     }
 };
 
-// Language switcher
-function setLanguage(lang) {
+// Language switcher - Make globally accessible
+window.setLanguage = function(lang) {
     localStorage.setItem('language', lang);
     document.documentElement.lang = lang;
 
     // Update all elements with data-translate attribute
     document.querySelectorAll('[data-translate]').forEach(el => {
         const key = el.getAttribute('data-translate');
-        if (translations[lang] && translations[lang][key]) {
-            el.textContent = translations[lang][key];
+        if (window.translations[lang] && window.translations[lang][key]) {
+            el.textContent = window.translations[lang][key];
         }
     });
 
     // Update placeholders
     document.querySelectorAll('[data-translate-placeholder]').forEach(el => {
         const key = el.getAttribute('data-translate-placeholder');
-        if (translations[lang] && translations[lang][key]) {
-            el.placeholder = translations[lang][key];
+        if (window.translations[lang] && window.translations[lang][key]) {
+            el.placeholder = window.translations[lang][key];
         }
     });
 
@@ -439,10 +440,10 @@ function setLanguage(lang) {
             btn.classList.add('active');
         }
     });
-}
+};
 
-// Chatbot translations
-const chatbotTranslations = {
+// Chatbot translations - Make globally accessible
+window.chatbotTranslations = {
     en: {
         welcome: "Hello! 👋 Welcome to Jaff Studio! I'm here to help you with our services. How can I assist you today?",
         services: "Our Services",
@@ -520,14 +521,14 @@ const chatbotTranslations = {
     }
 };
 
-// Get current language for chatbot
-function getChatbotText(key) {
+// Get current language for chatbot - Make globally accessible
+window.getChatbotText = function(key) {
     const lang = localStorage.getItem('language') || 'en';
-    return chatbotTranslations[lang][key] || chatbotTranslations['en'][key];
-}
+    return window.chatbotTranslations[lang][key] || window.chatbotTranslations['en'][key];
+};
 
 // Initialize language on page load
 document.addEventListener('DOMContentLoaded', () => {
     const savedLang = localStorage.getItem('language') || 'en';
-    setLanguage(savedLang);
+    window.setLanguage(savedLang);
 });

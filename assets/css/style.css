@@ -1895,6 +1895,13 @@ select:focus-visible {
     outline-offset: 2px;
 }
 
+/* Fix dropdown option colors for visibility */
+select option {
+    background: #1a1a1a;
+    color: #ffffff;
+    padding: 0.5rem;
+}
+
 /* Reduce motion for users who prefer it */
 @media (prefers-reduced-motion: reduce) {
     *,

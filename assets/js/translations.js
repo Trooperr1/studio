@@ -54,10 +54,74 @@ const translations = {
         confirmBooking: "Confirm Booking",
 
         // Footer
-        footerDesc: "Premium digital solutions for modern businesses.",
+        footerDesc: "Premium digital solutions for modern businesses. We transform ideas into reality with cutting-edge technology and creative excellence.",
         quickLinks: "Quick Links",
-        contactInfo: "Contact",
-        allRights: "All rights reserved."
+        footerServices: "Services",
+        footerContact: "Contact",
+        allRights: "All rights reserved.",
+        privacyPolicy: "Privacy Policy",
+        termsOfService: "Terms of Service",
+        aboutUs: "About Us",
+
+        // Homepage - Services Section
+        servicesSection: "Our Services",
+        servicesSectionSubtitle: "Comprehensive digital solutions tailored to your needs",
+        webDevTitle: "Web Development",
+        webDevDesc: "Create stunning, high-performance websites and web applications tailored to your business needs with cutting-edge technology.",
+        webDevFeature1: "Responsive Design",
+        webDevFeature2: "SEO Optimization",
+        webDevFeature3: "Fast Performance",
+        webDevFeature4: "Custom Solutions",
+        aiSolutionsTitle: "AI Solutions",
+        aiSolutionsDesc: "Harness the power of artificial intelligence to automate processes, gain insights, and enhance user experiences.",
+        aiFeature1: "Machine Learning",
+        aiFeature2: "Natural Language Processing",
+        aiFeature3: "Computer Vision",
+        aiFeature4: "Predictive Analytics",
+        posSystemsTitle: "POS Systems",
+        posSystemsDesc: "Modern point-of-sale solutions that streamline operations, track inventory, and boost your retail success.",
+        posFeature1: "Cloud-Based",
+        posFeature2: "Inventory Management",
+        posFeature3: "Sales Analytics",
+        posFeature4: "Multi-Store Support",
+        socialMediaTitle: "Social Media Management",
+        socialMediaDesc: "Build your brand and engage your audience across all social platforms with strategic content and community management.",
+        socialFeature1: "Content Strategy",
+        socialFeature2: "Community Management",
+        socialFeature3: "Analytics & Reporting",
+        socialFeature4: "Paid Advertising",
+
+        // Homepage - Why Choose Us
+        whyChooseTitle: "Why Choose Us",
+        whyChooseSubtitle: "Excellence in every aspect of our work",
+        fastDelivery: "Fast Delivery",
+        fastDeliveryDesc: "Quick turnaround times without compromising quality. Your project delivered on schedule.",
+        precision: "Precision",
+        precisionDesc: "Attention to detail in every aspect. We ensure pixel-perfect implementation and flawless functionality.",
+        secure: "Secure",
+        secureDesc: "Industry-standard security practices. Your data and your customers' data are always protected.",
+        scalable: "Scalable",
+        scalableDesc: "Solutions that grow with your business. Built to handle increased demand effortlessly.",
+        premiumQuality: "Premium Quality",
+        premiumQualityDesc: "High-end solutions that exceed expectations. Excellence is not just a goal, it's our standard.",
+        support247: "24/7 Support",
+        support247Desc: "Round-the-clock assistance whenever you need it. We're here to ensure your success.",
+
+        // Homepage - Stats
+        projectsCompleted: "Projects Completed",
+        happyClients: "Happy Clients",
+        teamMembers: "Team Members",
+        yearsExperience: "Years Experience",
+
+        // Homepage - Testimonials
+        testimonialsTitle: "What Our Clients Say",
+        testimonialsSubtitle: "Real feedback from real clients",
+
+        // Homepage - CTA
+        ctaTitle: "Ready to Start Your Project?",
+        ctaSubtitle: "Let's create something amazing together",
+        bookConsultation: "Book Consultation",
+        viewServices: "View Services"
     },
 
     fr: {
@@ -115,10 +179,74 @@ const translations = {
         confirmBooking: "Confirmer la Réservation",
 
         // Footer
-        footerDesc: "Solutions numériques premium pour les entreprises modernes.",
+        footerDesc: "Solutions numériques premium pour les entreprises modernes. Nous transformons les idées en réalité avec une technologie de pointe et une excellence créative.",
         quickLinks: "Liens Rapides",
-        contactInfo: "Contact",
-        allRights: "Tous droits réservés."
+        footerServices: "Services",
+        footerContact: "Contact",
+        allRights: "Tous droits réservés.",
+        privacyPolicy: "Politique de Confidentialité",
+        termsOfService: "Conditions d'Utilisation",
+        aboutUs: "À Propos",
+
+        // Homepage - Services Section
+        servicesSection: "Nos Services",
+        servicesSectionSubtitle: "Solutions numériques complètes adaptées à vos besoins",
+        webDevTitle: "Développement Web",
+        webDevDesc: "Créez des sites Web et des applications Web époustouflants et performants, adaptés aux besoins de votre entreprise avec une technologie de pointe.",
+        webDevFeature1: "Design Responsive",
+        webDevFeature2: "Optimisation SEO",
+        webDevFeature3: "Performance Rapide",
+        webDevFeature4: "Solutions Personnalisées",
+        aiSolutionsTitle: "Solutions IA",
+        aiSolutionsDesc: "Exploitez la puissance de l'intelligence artificielle pour automatiser les processus, obtenir des informations et améliorer les expériences utilisateur.",
+        aiFeature1: "Apprentissage Automatique",
+        aiFeature2: "Traitement du Langage Naturel",
+        aiFeature3: "Vision par Ordinateur",
+        aiFeature4: "Analyses Prédictives",
+        posSystemsTitle: "Systèmes PDV",
+        posSystemsDesc: "Solutions de point de vente modernes qui rationalisent les opérations, suivent les stocks et stimulent votre succès commercial.",
+        posFeature1: "Basé sur le Cloud",
+        posFeature2: "Gestion des Stocks",
+        posFeature3: "Analyses des Ventes",
+        posFeature4: "Support Multi-Magasins",
+        socialMediaTitle: "Gestion des Réseaux Sociaux",
+        socialMediaDesc: "Construisez votre marque et engagez votre public sur toutes les plateformes sociales avec du contenu stratégique et une gestion communautaire.",
+        socialFeature1: "Stratégie de Contenu",
+        socialFeature2: "Gestion Communautaire",
+        socialFeature3: "Analyses et Rapports",
+        socialFeature4: "Publicité Payante",
+
+        // Homepage - Why Choose Us
+        whyChooseTitle: "Pourquoi Nous Choisir",
+        whyChooseSubtitle: "Excellence dans tous les aspects de notre travail",
+        fastDelivery: "Livraison Rapide",
+        fastDeliveryDesc: "Délais de livraison rapides sans compromettre la qualité. Votre projet livré dans les délais.",
+        precision: "Précision",
+        precisionDesc: "Attention aux détails dans tous les aspects. Nous assurons une mise en œuvre pixel-parfaite et une fonctionnalité sans faille.",
+        secure: "Sécurisé",
+        secureDesc: "Pratiques de sécurité conformes aux normes de l'industrie. Vos données et celles de vos clients sont toujours protégées.",
+        scalable: "Évolutif",
+        scalableDesc: "Solutions qui grandissent avec votre entreprise. Conçues pour gérer une demande accrue sans effort.",
+        premiumQuality: "Qualité Premium",
+        premiumQualityDesc: "Solutions haut de gamme qui dépassent les attentes. L'excellence n'est pas seulement un objectif, c'est notre norme.",
+        support247: "Support 24/7",
+        support247Desc: "Assistance 24h/24 quand vous en avez besoin. Nous sommes là pour assurer votre succès.",
+
+        // Homepage - Stats
+        projectsCompleted: "Projets Réalisés",
+        happyClients: "Clients Satisfaits",
+        teamMembers: "Membres de l'Équipe",
+        yearsExperience: "Années d'Expérience",
+
+        // Homepage - Testimonials
+        testimonialsTitle: "Ce Que Disent Nos Clients",
+        testimonialsSubtitle: "Retours réels de vrais clients",
+
+        // Homepage - CTA
+        ctaTitle: "Prêt à Démarrer Votre Projet?",
+        ctaSubtitle: "Créons quelque chose d'incroyable ensemble",
+        bookConsultation: "Réserver une Consultation",
+        viewServices: "Voir les Services"
     },
 
     de: {
@@ -176,10 +304,74 @@ const translations = {
         confirmBooking: "Buchung Bestätigen",
 
         // Footer
-        footerDesc: "Premium digitale Lösungen für moderne Unternehmen.",
+        footerDesc: "Premium digitale Lösungen für moderne Unternehmen. Wir verwandeln Ideen in Realität mit modernster Technologie und kreativer Exzellenz.",
         quickLinks: "Schnelllinks",
-        contactInfo: "Kontakt",
-        allRights: "Alle Rechte vorbehalten."
+        footerServices: "Dienstleistungen",
+        footerContact: "Kontakt",
+        allRights: "Alle Rechte vorbehalten.",
+        privacyPolicy: "Datenschutz",
+        termsOfService: "Nutzungsbedingungen",
+        aboutUs: "Über Uns",
+
+        // Homepage - Services Section
+        servicesSection: "Unsere Dienstleistungen",
+        servicesSectionSubtitle: "Umfassende digitale Lösungen, zugeschnitten auf Ihre Bedürfnisse",
+        webDevTitle: "Webentwicklung",
+        webDevDesc: "Erstellen Sie beeindruckende, leistungsstarke Websites und Webanwendungen, die auf Ihre Geschäftsanforderungen mit modernster Technologie zugeschnitten sind.",
+        webDevFeature1: "Responsives Design",
+        webDevFeature2: "SEO-Optimierung",
+        webDevFeature3: "Schnelle Leistung",
+        webDevFeature4: "Maßgeschneiderte Lösungen",
+        aiSolutionsTitle: "KI-Lösungen",
+        aiSolutionsDesc: "Nutzen Sie die Kraft der künstlichen Intelligenz, um Prozesse zu automatisieren, Erkenntnisse zu gewinnen und Benutzererfahrungen zu verbessern.",
+        aiFeature1: "Maschinelles Lernen",
+        aiFeature2: "Natürliche Sprachverarbeitung",
+        aiFeature3: "Computer Vision",
+        aiFeature4: "Prädiktive Analysen",
+        posSystemsTitle: "POS-Systeme",
+        posSystemsDesc: "Moderne Kassenlösungen, die Abläufe optimieren, Lagerbestände verfolgen und Ihren Einzelhandelserfolg steigern.",
+        posFeature1: "Cloud-Basiert",
+        posFeature2: "Bestandsverwaltung",
+        posFeature3: "Verkaufsanalysen",
+        posFeature4: "Multi-Store-Unterstützung",
+        socialMediaTitle: "Social Media Management",
+        socialMediaDesc: "Bauen Sie Ihre Marke auf und binden Sie Ihr Publikum auf allen sozialen Plattformen mit strategischen Inhalten und Community-Management ein.",
+        socialFeature1: "Content-Strategie",
+        socialFeature2: "Community-Management",
+        socialFeature3: "Analysen & Berichte",
+        socialFeature4: "Bezahlte Werbung",
+
+        // Homepage - Why Choose Us
+        whyChooseTitle: "Warum Uns Wählen",
+        whyChooseSubtitle: "Exzellenz in jedem Aspekt unserer Arbeit",
+        fastDelivery: "Schnelle Lieferung",
+        fastDeliveryDesc: "Schnelle Bearbeitungszeiten ohne Kompromisse bei der Qualität. Ihr Projekt pünktlich geliefert.",
+        precision: "Präzision",
+        precisionDesc: "Liebe zum Detail in jedem Aspekt. Wir sorgen für pixelgenaue Umsetzung und fehlerfreie Funktionalität.",
+        secure: "Sicher",
+        secureDesc: "Sicherheitspraktiken nach Industriestandard. Ihre Daten und die Ihrer Kunden sind immer geschützt.",
+        scalable: "Skalierbar",
+        scalableDesc: "Lösungen, die mit Ihrem Unternehmen wachsen. Entwickelt, um erhöhte Nachfrage mühelos zu bewältigen.",
+        premiumQuality: "Premium-Qualität",
+        premiumQualityDesc: "High-End-Lösungen, die Erwartungen übertreffen. Exzellenz ist nicht nur ein Ziel, es ist unser Standard.",
+        support247: "24/7 Support",
+        support247Desc: "Rund um die Uhr Unterstützung, wann immer Sie sie brauchen. Wir sind hier, um Ihren Erfolg zu sichern.",
+
+        // Homepage - Stats
+        projectsCompleted: "Abgeschlossene Projekte",
+        happyClients: "Zufriedene Kunden",
+        teamMembers: "Teammitglieder",
+        yearsExperience: "Jahre Erfahrung",
+
+        // Homepage - Testimonials
+        testimonialsTitle: "Was Unsere Kunden Sagen",
+        testimonialsSubtitle: "Echtes Feedback von echten Kunden",
+
+        // Homepage - CTA
+        ctaTitle: "Bereit, Ihr Projekt zu Starten?",
+        ctaSubtitle: "Lassen Sie uns gemeinsam etwas Erstaunliches schaffen",
+        bookConsultation: "Beratung Buchen",
+        viewServices: "Dienste Ansehen"
     }
 };
 

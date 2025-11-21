@@ -35,7 +35,7 @@ class AIAssistant {
 
         // Welcome message
         setTimeout(() => {
-            this.addMessage('Hello! 👋 Welcome to Jaff Studio! I\'m here to help you with our services. How can I assist you today?', 'bot');
+            this.addMessage(getChatbotText('welcome'), 'bot');
             this.showQuickOptions();
         }, 1000);
     }
@@ -65,11 +65,11 @@ class AIAssistant {
 
         const buttonsHTML = `
             <div style="display: grid; gap: 0.5rem; margin-top: 0.5rem;">
-                <button class="quick-option-btn" data-action="services">Our Services</button>
-                <button class="quick-option-btn" data-action="pricing">Pricing</button>
-                <button class="quick-option-btn" data-action="portfolio">Portfolio</button>
-                <button class="quick-option-btn" data-action="booking">Book a Consultation</button>
-                <button class="quick-option-btn" data-action="contact">Contact Us</button>
+                <button class="quick-option-btn" data-action="services">${getChatbotText('services')}</button>
+                <button class="quick-option-btn" data-action="pricing">${getChatbotText('pricing')}</button>
+                <button class="quick-option-btn" data-action="portfolio">${getChatbotText('portfolio')}</button>
+                <button class="quick-option-btn" data-action="booking">${getChatbotText('booking')}</button>
+                <button class="quick-option-btn" data-action="contact">${getChatbotText('contactUs')}</button>
             </div>
         `;
 
@@ -93,20 +93,20 @@ class AIAssistant {
 
     handleQuickOption(action) {
         const responses = {
-            services: 'Our Services:\n\n🌐 Web Development - Custom websites and web applications\n🤖 AI Solutions - Chatbots and intelligent automation\n💳 POS Systems - Modern point-of-sale solutions\n📱 Social Media Management - Complete digital presence\n\nWant to learn more about any specific service?',
-            pricing: 'Our Pricing:\n\n💎 Premium Package - $999/month (Complete digital solution)\n⭐ Professional Package - $599/month (Advanced features)\n📦 Starter Package - $299/month (Essential services)\n\nWould you like to discuss which package fits your needs?',
-            portfolio: 'Check out our Portfolio page to see our latest projects! We\'ve worked with clients across various industries including e-commerce, hospitality, and professional services.\n\nVisit: jaffstudio.com/portfolio.html',
-            booking: 'Great! I can help you schedule a consultation. Visit our booking page to choose a convenient time:\n\njaffstudio.com/booking.html\n\nOr would you like me to collect your details and have our team reach out to you?',
-            contact: 'Contact Information:\n\n📧 Email: contact@jaffstudio.com\n📱 Phone: +41 (0) 44 123 4567\n📍 Address: Bahnhofstrasse 123, 8001 Zürich, Switzerland\n\nFeel free to reach out anytime!'
+            services: getChatbotText('servicesResponse'),
+            pricing: getChatbotText('pricingResponse'),
+            portfolio: getChatbotText('portfolioResponse'),
+            booking: getChatbotText('bookingResponse'),
+            contact: getChatbotText('contactResponse')
         };
 
         // Add user message
         const optionTexts = {
-            services: 'Our Services',
-            pricing: 'Pricing',
-            portfolio: 'Portfolio',
-            booking: 'Book a Consultation',
-            contact: 'Contact Us'
+            services: getChatbotText('services'),
+            pricing: getChatbotText('pricing'),
+            portfolio: getChatbotText('portfolio'),
+            booking: getChatbotText('booking'),
+            contact: getChatbotText('contactUs')
         };
         this.addMessage(optionTexts[action], 'user');
 
@@ -123,7 +123,7 @@ class AIAssistant {
                     this.showTyping();
                     setTimeout(() => {
                         this.hideTyping();
-                        this.addMessage('I\'d love to send you more information! May I have your email address?', 'bot');
+                        this.addMessage(getChatbotText('emailAsk'), 'bot');
                         this.showEmailForm();
                     }, 1000);
                 }, 2000);
@@ -224,7 +224,7 @@ class AIAssistant {
                     this.showTyping();
                     setTimeout(() => {
                         this.hideTyping();
-                        this.addMessage('I\'d love to send you more information! May I have your email address?', 'bot');
+                        this.addMessage(getChatbotText('emailAsk'), 'bot');
                         this.showEmailForm();
                     }, 1000);
                 }, 2000);

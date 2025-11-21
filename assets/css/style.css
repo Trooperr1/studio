@@ -216,6 +216,32 @@ nav.scrolled {
     transition: var(--transition);
 }
 
+/* Language Switcher */
+.lang-switcher {
+    display: flex;
+    gap: 0.5rem;
+    margin-left: 1rem;
+}
+
+.lang-btn {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--medium-gray);
+    padding: 0.4rem 0.8rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.lang-btn:hover,
+.lang-btn.active {
+    background: var(--white);
+    color: var(--primary-black);
+    border-color: var(--white);
+}
+
 /* ============================================
    SECTIONS
    ============================================ */
